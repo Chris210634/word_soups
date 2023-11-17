@@ -1,0 +1,7 @@
+#!/bin/bash
+
+python main_crossdataset.py --seed 1 --use_pretrained_image_features 1 --use_cached_image_features 1 --train_with_descriptors 1 --soup_eval 1 --init_lam $1 --teacher_temp $2 --score_averaging 1 --soup_eval 1 --train_text_encoder 0 --train_visual_encoder 0 --visual_prompt_depth 0 --text_prompt_depth 1 --lr 8e-5 --save_model 2 --n_epochs 20 --iters_per_epoch 50 > run_coop_regularized_output_lam_$1_temp_$2_detailed.o
+
+python main_crossdataset.py --seed 2 --use_pretrained_image_features 1 --use_cached_image_features 1 --train_with_descriptors 1 --soup_eval 1 --init_lam $1 --teacher_temp $2 --score_averaging 1 --soup_eval 1 --train_text_encoder 0 --train_visual_encoder 0 --visual_prompt_depth 0 --text_prompt_depth 1 --lr 8e-5 --save_model 2 --n_epochs 20 --iters_per_epoch 50 >> run_coop_regularized_output_lam_$1_temp_$2_detailed.o
+
+python main_crossdataset.py --seed 3 --use_pretrained_image_features 1 --use_cached_image_features 1 --train_with_descriptors 1 --soup_eval 1 --init_lam $1 --teacher_temp $2 --score_averaging 1 --soup_eval 1 --train_text_encoder 0 --train_visual_encoder 0 --visual_prompt_depth 0 --text_prompt_depth 1 --lr 8e-5 --save_model 2 --n_epochs 20 --iters_per_epoch 50 >> run_coop_regularized_output_lam_$1_temp_$2_detailed.o
