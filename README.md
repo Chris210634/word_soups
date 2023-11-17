@@ -3,7 +3,7 @@
 
 Code in this repo uses code from [multimodal prompt learning](https://github.com/muzairkhattak/multimodal-prompt-learning), which in turn uses code from [Co-CoOp and CoOp](https://github.com/KaiyangZhou/CoOp).
 
-## Installation
+## ⏳ Installation
 -------------------
 
 * Install dassl library.
@@ -45,7 +45,7 @@ data/
 Alternatively, follow the download instructions here (some dataset links are stale):
 [installing datasets](https://github.com/muzairkhattak/multimodal-prompt-learning/blob/main/docs/DATASETS.md)
 
-## Descriptor soups
+## 🍜 Descriptor soups
 ---------------------------
 
 ### (1) Generate Description Features
@@ -68,7 +68,7 @@ This needs to be done for each random seed of ImageNet training split! Run:
 
 This will save the greedily selected descriptors in `cache/good_descriptions_seed1__ViT-B-16_openai.list` as a list.
 
-## Word soups
+## 🍜 Word soups
 --------------------
 
 ### (1) Get Word Features
@@ -85,7 +85,7 @@ This needs to be done for each random seed of ImageNet training split! Run:
 
 This will save the greedily selected descriptors in `cache/word_soup_descriptors_seed1__ViT-B-16_openai.list` as a list.
 
-## Baselines
+## 🧪 Baselines
 -----------------
 
 ### CE
@@ -146,7 +146,7 @@ current best learning rates:
 
 Once learning rate has been tuned, run the full evaluation with the best learning rate for each,use `*_with_eval.sh` scripts.
 
-## Base to novel setting
+## 🧪 Base to novel setting
 -----------------------------
 
 First, generate features again:
