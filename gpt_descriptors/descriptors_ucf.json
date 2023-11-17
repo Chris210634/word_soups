@@ -1,0 +1,896 @@
+{
+      "Apply Eye Makeup": [
+            "a person with their eyes closed",
+            "a variety of eye makeup products such as eyeshadow, eyeliner, and mascara",
+            "brushes and applicators for applying the makeup",
+            "a mirror to check the results",
+            "a light source to illuminate the face"
+      ],
+      "Apply Lipstick": [
+            "cylindrical tube",
+            "pointed tip",
+            "lid or cap",
+            "various colors",
+            "glossy finish",
+            "label or logo",
+            "applicator brush"
+      ],
+      "Archery": [
+            "bow and arrow",
+            "target",
+            "archer wearing protective gear",
+            "arrows with fletching",
+            "quiver",
+            "bowstring",
+            "arm guard",
+            "finger tab",
+            "stabilizer"
+      ],
+      "Baby Crawling": [
+            "small human figure",
+            "four limbs",
+            "hands and knees on the ground",
+            "head up and looking forward",
+            "arms and legs moving in a crawling motion",
+            "clothing or diaper",
+            "facial features such as eyes, nose, and mouth"
+      ],
+      "Balance Beam": [
+            "a long, narrow, wooden beam",
+            "a flat, non-slip surface",
+            "two raised ends",
+            "a low center",
+            "a raised handrail on one side",
+            "a foam or rubber padding on the beam",
+            "a mat or flooring underneath the beam"
+      ],
+      "Band Marching": [
+            "a group of people in uniform",
+            "instruments such as drums, trumpets, trombones, and saxophones",
+            "flags and banners",
+            "a conductor leading the group",
+            "a formation of people marching in step",
+            "a large crowd of people watching the performance"
+      ],
+      "Baseball Pitch": [
+            "a baseball player throwing a ball",
+            "a catcher behind the plate",
+            "a batter in the batter's box",
+            "a pitcher's mound",
+            "a baseball diamond",
+            "a bat",
+            "a glove",
+            "a ball"
+      ],
+      "Basketball": [
+            "round, orange ball",
+            "black lines and panels",
+            "a rubber or synthetic surface",
+            "a valve for inflation",
+            "a hoop or net for shooting",
+            "a backboard for rebounds"
+      ],
+      "Basketball Dunk": [
+            "a basketball player in mid-air",
+            "the player's arm extended towards the hoop",
+            "the ball in the player's hand",
+            "the hoop in the background",
+            "the player's feet off the ground",
+            "the player's body in an arched position",
+            "the player's head tilted back",
+            "the player's eyes focused on the hoop"
+      ],
+      "Bench Press": [
+            "a flat, horizontal surface",
+            "two vertical posts with a barbell resting on top",
+            "a weight rack for storing weights",
+            "a seat or bench for the user to sit on",
+            "a safety guard to prevent the barbell from falling",
+            "a spotter to help the user lift the barbell"
+      ],
+      "Biking": [
+            "person wearing a helmet",
+            "bicycle with two wheels",
+            "handlebars",
+            "pedals",
+            "a chain",
+            "a seat",
+            "a frame",
+            "a kickstand"
+      ],
+      "Billiards": [
+            "a large, rectangular table",
+            "a felt-covered surface",
+            "six pockets around the edges of the table",
+            "two sets of balls, one set of striped and one set of solid",
+            "two cue sticks",
+            "a triangle rack",
+            "a chalkboard for keeping score"
+      ],
+      "Blow Dry Hair": [
+            "hairstyle with volume and texture",
+            "shiny, smooth hair",
+            "a round brush used to create the style",
+            "a blow dryer used to dry the hair",
+            "a comb or brush used to style the hair",
+            "styling products such as mousse, gel, or hairspray"
+      ],
+      "Blowing Candles": [
+            "a lit candle",
+            "a person blowing out the candle",
+            "a cake or other food item with the candle",
+            "a flame",
+            "smoke from the extinguished candle",
+            "a plate or other surface to hold the candle",
+            "a birthday or other celebratory event"
+      ],
+      "Body Weight Squats": [
+            "person in a squatting position",
+            "feet shoulder-width apart",
+            "back straight and chest up",
+            "arms outstretched in front of the body",
+            "knees bent at a 90-degree angle",
+            "buttocks close to the ground",
+            "head looking forward"
+      ],
+      "Bowling": [
+            "a long, narrow lane",
+            "a set of pins at the end of the lane",
+            "a ball return system",
+            "a scoring system",
+            "a set of balls",
+            "a set of shoes",
+            "a set of bumpers or gutters"
+      ],
+      "Boxing Punching Bag": [
+            "cylindrical shape",
+            "filled with sand, water, or other material",
+            "hanging from a stand or mount",
+            "a handle or strap for carrying",
+            "a chain or rope for hanging",
+            "a cover or shell made of leather, vinyl, or canvas",
+            "a logo or label of the manufacturer"
+      ],
+      "Boxing Speed Bag": [
+            "cylindrical shape",
+            "made of leather or synthetic material",
+            "filled with air or sand",
+            "attached to a swivel and a platform",
+            "a hanging loop at the top",
+            "a valve for adjusting the air pressure"
+      ],
+      "Breast Stroke": [
+            "swimmer's body is in a prone position",
+            "arms move in a simultaneous circular motion",
+            "legs move in a simultaneous up-and-down motion",
+            "head remains above the water",
+            "arms and legs move in a synchronized pattern",
+            "body remains on the same plane throughout the stroke"
+      ],
+      "Brushing Teeth": [
+            "person brushing their teeth",
+            "toothbrush",
+            "toothpaste",
+            "sink or basin",
+            "mirror",
+            "running water",
+            "towel",
+            "dental floss"
+      ],
+      "Clean And Jerk": [
+            "two-part weightlifting exercise",
+            "barbell held in front of the body",
+            "feet shoulder-width apart",
+            "hips and knees bent",
+            "barbell lifted to the shoulders",
+            "barbell pushed overhead",
+            "arms and legs straightened",
+            "barbell lowered to the floor"
+      ],
+      "Cliff Diving": [
+            "person jumping off a cliff or high platform",
+            "body in a straight, vertical position",
+            "arms and legs spread out",
+            "water below the cliff or platform",
+            "splash of water when the person enters the water",
+            "spectators watching from the cliff or platform"
+      ],
+      "Cricket Bowling": [
+            "a person wearing white cricket clothing",
+            "a cricket ball in the hand of the bowler",
+            "a cricket bat in the hand of the batsman",
+            "a wicket with three stumps and two bails",
+            "a pitch with a crease",
+            "a field of players in the background"
+      ],
+      "Cricket Shot": [
+            "a cricket bat",
+            "a cricket ball",
+            "a player in a batting stance",
+            "a fielder in the background",
+            "a wicket in the background",
+            "a grassy field",
+            "a scoreboard in the background"
+      ],
+      "Cutting In Kitchen": [
+            "kitchen countertop",
+            "cutting board",
+            "knife",
+            "chopping block",
+            "food items such as vegetables, fruits, and meats",
+            "kitchen utensils such as a spatula, spoon, and whisk",
+            "kitchen appliances such as a blender, food processor, and mixer",
+            "kitchen sink"
+      ],
+      "Diving": [
+            "person wearing a wetsuit",
+            "person wearing a diving mask",
+            "person wearing fins",
+            "person carrying a diving tank",
+            "person carrying a buoyancy control device",
+            "person carrying a weight belt",
+            "person carrying a dive knife",
+            "person carrying a dive light",
+            "person carrying a dive flag",
+            "underwater environment"
+      ],
+      "Drumming": [
+            "a person playing a drum",
+            "a drum set with multiple drums and cymbals",
+            "a drumstick or mallet",
+            "a drum stool or stand",
+            "a microphone",
+            "a drum key for tuning the drums",
+            "a drum rug or mat to protect the floor"
+      ],
+      "Fencing": [
+            "two people wearing protective gear",
+            "two swords or foils",
+            "a referee or judge",
+            "a marked off area for the fencing match",
+            "a score board",
+            "a net or barrier between the two fencers"
+      ],
+      "Field Hockey Penalty": [
+            "two players in a face-off position",
+            "one player with a stick raised in the air",
+            "the other player with their stick on the ground",
+            "a referee with their arm raised",
+            "a penalty spot marked on the field",
+            "a goal keeper in the goal area"
+      ],
+      "Floor Gymnastics": [
+            "people performing gymnastics on a mat",
+            "brightly colored leotards",
+            "gymnasts performing flips, jumps, and other acrobatic moves",
+            "a coach or judge observing the performance",
+            "a score board or other equipment used for judging",
+            "a crowd of spectators watching the performance"
+      ],
+      "Frisbee Catch": [
+            "two people standing facing each other",
+            "one person throwing a Frisbee",
+            "the other person catching the Frisbee",
+            "the Frisbee is usually brightly colored",
+            "the people are usually wearing athletic clothing",
+            "the people may be smiling or laughing"
+      ],
+      "Front Crawl": [
+            "swimmer in a horizontal position",
+            "arms alternating in a windmill motion",
+            "legs kicking in a flutter kick motion",
+            "head and body in a streamlined position",
+            "arms and legs moving in a coordinated manner",
+            "body rotating from side to side"
+      ],
+      "Golf Swing": [
+            "a golfer in a stance",
+            "a golf club in the golfer's hands",
+            "the golfer's arms and body in motion",
+            "the club head making contact with the ball",
+            "the ball in flight",
+            "the golfer's follow-through",
+            "the golfer's feet and body position at the end of the swing"
+      ],
+      "Haircut": [
+            "person with a new hairstyle",
+            "different lengths of hair",
+            "layers or bangs",
+            "different colors of hair",
+            "different styles of cuts",
+            "different parts of the head shaved or trimmed",
+            "different types of styling products used"
+      ],
+      "Hammering": [
+            "a person holding a hammer",
+            "a hammer head with a metal head and a wooden handle",
+            "a nail or other object being struck by the hammer",
+            "a surface being struck by the hammer",
+            "sparks or other debris flying from the hammering action"
+      ],
+      "Hammer Throw": [
+            "athlete throwing a metal ball attached to a wire",
+            "athlete spinning rapidly in a circle",
+            "athlete releasing the hammer at the end of the spin",
+            "the hammer flying through the air",
+            "the hammer landing in a designated area",
+            "the athlete's feet planted firmly in the ground"
+      ],
+      "Handstand Pushups": [
+            "person in a handstand position",
+            "arms and legs extended",
+            "body in a straight line",
+            "hands and feet firmly planted on the ground",
+            "head and neck in a neutral position",
+            "core engaged",
+            "shoulders and hips in line with the body"
+      ],
+      "Handstand Walking": [
+            "person upside down with their hands and feet on the ground",
+            "arms and legs spread out in a V-shape",
+            "body in a straight line",
+            "head and neck in a neutral position",
+            "eyes looking forward",
+            "balance maintained by shifting weight from one hand to the other"
+      ],
+      "Head Massage": [
+            "person receiving a massage",
+            "person giving a massage",
+            "massage oils or lotions",
+            "massage tools such as a brush, comb, or fingers",
+            "massage techniques such as kneading, tapping, or rubbing",
+            "massage area such as the scalp, temples, or neck"
+      ],
+      "High Jump": [
+            "athlete jumping over a bar",
+            "bar set at a certain height",
+            "athlete running and jumping with arms and legs extended",
+            "athlete clearing the bar with their head and shoulders",
+            "athlete landing on a mat or other soft surface",
+            "officials measuring the height of the bar"
+      ],
+      "Horse Race": [
+            "horses running in a line",
+            "jockeys on the horses",
+            "a racetrack",
+            "a crowd of people watching",
+            "flags or banners",
+            "a finish line",
+            "a starting gate"
+      ],
+      "Horse Riding": [
+            "a person riding a horse",
+            "a saddle and bridle",
+            "a riding helmet",
+            "riding boots",
+            "a riding crop or whip",
+            "a horse with a mane and tail",
+            "a horse with four legs",
+            "a horse with hooves"
+      ],
+      "Hula Hoop": [
+            "circular shape",
+            "brightly colored plastic",
+            "a diameter of approximately 1 meter",
+            "a weight of approximately 0.5 kilograms",
+            "a hollow center",
+            "a handle or grip on one side"
+      ],
+      "Ice Dancing": [
+            "two people skating together",
+            "graceful and intricate movements",
+            "close physical contact between the two skaters",
+            "synchronized movements",
+            "intricate footwork",
+            "spins and jumps",
+            "costumes and music"
+      ],
+      "Javelin Throw": [
+            "athlete throwing a javelin",
+            "javelin is a long, thin spear-like object",
+            "athlete is standing in a throwing position",
+            "athlete is facing away from the camera",
+            "athlete is throwing the javelin with an overhand motion",
+            "javelin is in flight",
+            "athlete is wearing athletic clothing"
+      ],
+      "Juggling Balls": [
+            "round, colorful objects",
+            "usually made of rubber, plastic, or leather",
+            "often have a pattern or design on them",
+            "may have a handle or loop attached",
+            "may have a weight inside to help with juggling"
+      ],
+      "Jumping Jack": [
+            "a wooden figure with a painted face",
+            "two arms and two legs that move up and down when the figure is pulled by a string",
+            "a red or blue hat",
+            "a white shirt with a red or blue bow tie",
+            "a pair of black shoes",
+            "a yellow or green waistcoat"
+      ],
+      "Jump Rope": [
+            "a long, thin rope",
+            "two handles at the end of the rope",
+            "a variety of colors and patterns",
+            "a swivel at the center of the rope",
+            "a counterweight at the end of the rope",
+            "a variety of lengths and thicknesses"
+      ],
+      "Kayaking": [
+            "person in a kayak",
+            "kayak with a cockpit",
+            "paddle",
+            "life jacket",
+            "helmet",
+            "water",
+            "waves or ripples in the water",
+            "other kayakers in the background"
+      ],
+      "Knitting": [
+            "yarn or thread",
+            "needles",
+            "a pattern or design",
+            "a knitted fabric",
+            "a person or machine knitting",
+            "a basket or bag of supplies",
+            "a finished product such as a scarf, hat, or blanket"
+      ],
+      "Long Jump": [
+            "track and field event",
+            "a long runway",
+            "a sand pit at the end of the runway",
+            "a take-off board at the beginning of the runway",
+            "a line marking the end of the runway",
+            "a measuring tape to measure the distance of the jump",
+            "a competitor in the middle of the runway, preparing to jump"
+      ],
+      "Lunges": [
+            "a person in a lunge position",
+            "one leg bent and the other straight",
+            "the bent leg is behind the straight leg",
+            "the torso is upright and the arms are extended",
+            "the back is straight and the head is up",
+            "the feet are flat on the ground and the toes are pointed forward"
+      ],
+      "Military Parade": [
+            "large groups of people marching in formation",
+            "military personnel in uniform",
+            "flags and banners",
+            "military vehicles and equipment",
+            "marching bands",
+            "salutes and other ceremonial gestures",
+            "large crowds of spectators"
+      ],
+      "Mixing": [
+            "electronic device",
+            "black or silver",
+            "a large, rectangular surface",
+            "several knobs and sliders",
+            "several input and output ports",
+            "a power cord",
+            "a headphone jack",
+            "a microphone jack",
+            "a monitor output jack"
+      ],
+      "Mopping Floor": [
+            "a mop",
+            "a bucket",
+            "a cleaning solution",
+            "a sponge",
+            "a broom",
+            "a dustpan",
+            "a rag",
+            "a vacuum cleaner",
+            "a mop handle",
+            "a mop head"
+      ],
+      "Nunchucks": [
+            "two sticks connected by a chain or cord",
+            "usually made of wood, metal, or plastic",
+            "one stick is shorter than the other",
+            "handles on each end of the sticks",
+            "a loop at the end of the chain or cord for easy gripping",
+            "often used in martial arts"
+      ],
+      "Parallel Bars": [
+            "two metal bars parallel to each other",
+            "metal bars are usually connected by a metal frame",
+            "metal bars are usually adjustable in height",
+            "metal bars are usually padded with foam or rubber",
+            "metal bars are usually used for gymnastics or physical therapy exercises"
+      ],
+      "Pizza Tossing": [
+            "person tossing a pizza in the air",
+            "pizza dough stretched out in a circular shape",
+            "hands and arms raised in the air",
+            "flour or cornmeal on the surface of the pizza",
+            "toppings on the pizza",
+            "a pizza peel or other tool used to handle the pizza"
+      ],
+      "Playing Cello": [
+            "four-stringed instrument",
+            "wooden body",
+            "curved neck",
+            "strings stretched across the body",
+            "a bow held in the right hand",
+            "a bridge connecting the strings to the body",
+            "a fingerboard on the neck",
+            "a tuning peg at the end of the neck"
+      ],
+      "Playing Daf": [
+            "a circular frame",
+            "a single head with a skin or plastic covering",
+            "a set of metal or plastic jingles",
+            "a set of metal or plastic tongues",
+            "a set of metal or plastic beaters",
+            "a set of metal or plastic rings"
+      ],
+      "Playing Dhol": [
+            "a two-headed drum",
+            "a wooden frame",
+            "a leather or synthetic skin stretched over the frame",
+            "two drumsticks",
+            "a strap to hold the drum in place",
+            "a player holding the drumsticks and striking the drum"
+      ],
+      "Playing Flute": [
+            "a long, slender tube-like instrument",
+            "a mouthpiece at one end",
+            "a series of finger holes along the length of the tube",
+            "a curved head joint",
+            "a key mechanism at the end of the tube",
+            "a cork at the end of the tube",
+            "a metal or wooden body"
+      ],
+      "Playing Guitar": [
+            "a person playing the guitar",
+            "a six-stringed instrument",
+            "a wooden body",
+            "a neck with frets and tuning pegs",
+            "a sound hole",
+            "strings stretched across the neck",
+            "a pickguard",
+            "a bridge and saddle",
+            "a headstock with tuning keys"
+      ],
+      "Playing Piano": [
+            "black or white",
+            "a large, rectangular body",
+            "a stand or mount to support the body",
+            "88 keys",
+            "three pedals",
+            "a music stand",
+            "a bench",
+            "a music score"
+      ],
+      "Playing Sitar": [
+            "a long-necked stringed instrument",
+            "a curved body with a flat top",
+            "a gourd-shaped resonator",
+            "a long, fretted neck",
+            "six or seven strings",
+            "a bridge to hold the strings",
+            "a curved pegbox at the end of the neck",
+            "a curved tailpiece at the end of the body"
+      ],
+      "Playing Tabla": [
+            "two drums of different sizes",
+            "one drum is larger and is called the bayan",
+            "the other drum is smaller and is called the dayan",
+            "both drums have a black spot in the center",
+            "the drums are made of wood and covered with animal skin",
+            "the drums are played with the hands and fingers",
+            "the drums are usually accompanied by a pair of cymbals"
+      ],
+      "Playing Violin": [
+            "four-stringed instrument",
+            "wooden body",
+            "curved neck",
+            "scroll at the top of the neck",
+            "strings stretched across the body",
+            "bridge connecting the strings to the body",
+            "tuning pegs at the top of the neck",
+            "bow held in the right hand",
+            "left hand pressing down on the strings"
+      ],
+      "Pole Vault": [
+            "a long, flexible pole",
+            "a crossbar",
+            "a landing pit",
+            "a runway",
+            "a take-off board",
+            "a plant box",
+            "a vaulting box",
+            "a safety mat"
+      ],
+      "Pommel Horse": [
+            "a wooden or metal frame",
+            "two parallel bars, one higher than the other",
+            "a leather-covered cushion between the bars",
+            "a handle on each side of the cushion",
+            "a set of four metal feet",
+            "a set of four metal handles on the top bar"
+      ],
+      "Pull Ups": [
+            "disposable diaper",
+            "stretchy waistband and leg openings",
+            "colorful designs",
+            "absorbent material",
+            "adhesive tabs to secure the diaper in place",
+            "elastic waistband for a snug fit"
+      ],
+      "Punch": [
+            "a bowl or container",
+            "a ladle",
+            "a variety of fruits, juices, and other ingredients",
+            "a variety of spices and herbs",
+            "a variety of alcoholic beverages",
+            "a variety of garnishes such as mint leaves, citrus slices, and berries"
+      ],
+      "Push Ups": [
+            "person in a plank position",
+            "arms and legs extended",
+            "hands and feet on the ground",
+            "body lowered towards the ground",
+            "arms and legs straight",
+            "head and neck in line with the spine"
+      ],
+      "Rafting": [
+            "people in a large inflatable boat",
+            "paddles",
+            "life jackets",
+            "helmets",
+            "a river or lake",
+            "rapids or waves",
+            "mountains or other natural scenery in the background"
+      ],
+      "Rock Climbing Indoor": [
+            "climbing walls with various handholds and footholds",
+            "ropes and harnesses",
+            "crash mats",
+            "safety equipment",
+            "chalk bags",
+            "climbing shoes",
+            "belay devices",
+            "carabiners",
+            "helmets"
+      ],
+      "Rope Climbing": [
+            "a person climbing a rope",
+            "a rope suspended from a ceiling or wall",
+            "a harness or other safety equipment",
+            "a belay device or other safety equipment",
+            "a crash pad or other safety equipment",
+            "a spotter or other safety equipment",
+            "a chalk bag or other safety equipment"
+      ],
+      "Rowing": [
+            "a boat with one or more rowers",
+            "oars in the water",
+            "a coxswain or steersman",
+            "a cox box or steering mechanism",
+            "a rudder",
+            "a flag or pennant",
+            "a launch or launch dock"
+      ],
+      "Salsa Spin": [
+            "a person spinning in a circle",
+            "a partner in a close embrace",
+            "the leader and follower's arms extended",
+            "the leader's arm in a circular motion",
+            "the follower's arm in a circular motion",
+            "the leader and follower's feet in sync",
+            "the leader and follower's heads close together",
+            "the leader and follower's eyes locked in a gaze"
+      ],
+      "Shaving Beard": [
+            "facial hair",
+            "trimmed and shaped",
+            "short and neat",
+            "usually a mustache and chin beard",
+            "may have sideburns",
+            "may have a goatee",
+            "may have a soul patch"
+      ],
+      "Shotput": [
+            "metal or plastic ball",
+            "metal or plastic handle",
+            "a throwing circle",
+            "a throwing line",
+            "a landing area",
+            "a backstop"
+      ],
+      "Skate Boarding": [
+            "a four-wheeled board",
+            "a deck with grip tape",
+            "trucks and wheels",
+            "a kicktail",
+            "a nose",
+            "a tail",
+            "a variety of colors and designs"
+      ],
+      "Skiing": [
+            "person wearing ski gear",
+            "ski poles",
+            "skis",
+            "snow",
+            "mountains or hills",
+            "ski lift",
+            "chairlift",
+            "ski tracks"
+      ],
+      "Skijet": [
+            "watercraft",
+            "jet-ski style design",
+            "one or two riders",
+            "handlebars for steering",
+            "jet propulsion system",
+            "water-ski style bindings for the riders",
+            "buoyancy chambers for stability"
+      ],
+      "Sky Diving": [
+            "person wearing a parachute",
+            "person in free fall",
+            "person with a helmet",
+            "person with goggles",
+            "person with a jumpsuit",
+            "person with a harness",
+            "person with a parachute canopy",
+            "person with a reserve parachute",
+            "person with a altimeter",
+            "person with a altimeter and other instruments"
+      ],
+      "Soccer Juggling": [
+            "person juggling a soccer ball",
+            "person using their feet, head, chest, or thighs to keep the ball in the air",
+            "person wearing soccer cleats",
+            "person in a soccer field or other open area",
+            "soccer ball in the air",
+            "person with a focused expression"
+      ],
+      "Soccer Penalty": [
+            "two players, one from each team, standing in the penalty area",
+            "a referee standing nearby",
+            "a soccer ball placed on the penalty spot",
+            "a goal keeper standing in the goal",
+            "a wall of players from the defending team lined up in front of the goal",
+            "a crowd of spectators watching the action"
+      ],
+      "Still Rings": [
+            "metal rings suspended from a frame",
+            "rings are usually made of steel or wood",
+            "rings are usually painted in bright colors",
+            "rings are usually hung from a height of at least 8 feet",
+            "rings are usually hung from a single point, allowing them to swing freely",
+            "rings are usually hung in a circular pattern"
+      ],
+      "Sumo Wrestling": [
+            "two large wrestlers wearing mawashi (traditional Japanese loincloth)",
+            "wrestlers in a circular ring",
+            "wrestlers pushing and shoving each other",
+            "wrestlers trying to force the other out of the ring",
+            "referee in the ring",
+            "audience watching the match"
+      ],
+      "Surfing": [
+            "person standing on a surfboard",
+            "ocean waves",
+            "beach or shoreline",
+            "wet suit",
+            "surfboard",
+            "sun or bright sky",
+            "beach umbrellas or beach chairs",
+            "other surfers in the background"
+      ],
+      "Swing": [
+            "metal or wooden frame",
+            "two or more ropes or chains attached to the frame",
+            "a seat suspended from the ropes or chains",
+            "a backrest or armrests",
+            "a footrest or platform",
+            "a canopy or roof for shade"
+      ],
+      "Table Tennis Shot": [
+            "two players facing each other",
+            "a net between them",
+            "a table with a white or orange surface",
+            "a paddle in each player's hand",
+            "a white or orange ball in mid-air",
+            "the players' arms and bodies in motion",
+            "the ball bouncing off the paddle and net"
+      ],
+      "Tai Chi": [
+            "two people in a slow, graceful, and coordinated movement",
+            "both people wearing loose-fitting clothing",
+            "both people standing in a relaxed posture",
+            "both people performing a series of slow, circular movements",
+            "both people breathing in a slow and controlled manner",
+            "both people maintaining a focused and relaxed mental state"
+      ],
+      "Tennis Swing": [
+            "a person in the photo",
+            "a tennis racket in the photo",
+            "the person in the photo is in a mid-swing position",
+            "the person's arm is extended and the racket is in the air",
+            "the person's feet are planted firmly on the ground",
+            "the person's body is facing the direction of the swing",
+            "the person's eyes are focused on the ball"
+      ],
+      "Throw Discus": [
+            "a round, flat disc",
+            "a metal rim",
+            "a plastic or rubber center",
+            "a handle or grip",
+            "a flight line or groove",
+            "a center of gravity mark"
+      ],
+      "Trampoline Jumping": [
+            "a trampoline with a metal frame",
+            "a person or persons jumping on the trampoline",
+            "a safety net surrounding the trampoline",
+            "a mat or padding on the trampoline",
+            "a harness or other safety equipment",
+            "a person or persons spotting the jumper",
+            "a person or persons supervising the activity"
+      ],
+      "Typing": [
+            "a keyboard with keys",
+            "a mouse or trackpad",
+            "a monitor or laptop screen",
+            "a desk or table",
+            "a chair",
+            "a person sitting in the chair",
+            "hands on the keyboard or mouse"
+      ],
+      "Uneven Bars": [
+            "two parallel bars of different heights",
+            "metal or wooden bars",
+            "metal or wooden supports",
+            "a mat or padding on the floor",
+            "a safety belt or harness",
+            "a set of hand grips or handles on the bars"
+      ],
+      "Volleyball Spiking": [
+            "a player jumping up to hit the ball",
+            "the ball in mid-air",
+            "the player's arm extended to hit the ball",
+            "the player's body in a spiking position",
+            "the player's feet off the ground",
+            "the player's body leaning forward",
+            "the player's arm and hand in a fist shape"
+      ],
+      "Walking With Dog": [
+            "person walking with a dog",
+            "leash connecting the person and the dog",
+            "the dog's fur color and breed",
+            "the person's clothing and posture",
+            "the environment they are walking in (park, street, etc.)"
+      ],
+      "Wall Pushups": [
+            "person doing a pushup against a wall",
+            "arms and legs extended",
+            "hands and feet flat against the wall",
+            "body in a straight line",
+            "head and neck in line with the spine",
+            "core engaged and tight",
+            "back and hips close to the wall"
+      ],
+      "Writing On Board": [
+            "whiteboard or chalkboard",
+            "a flat, rectangular surface",
+            "a frame or border around the board",
+            "a writing utensil, such as a marker or chalk",
+            "writing or drawings on the board",
+            "a stand or mount to support the board",
+            "a eraser or cloth to clean the board"
+      ],
+      "Yo Yo": [
+            "round, disc-shaped toy",
+            "two discs connected by an axle",
+            "string attached to the axle",
+            "brightly colored plastic or metal body",
+            "loop at the end of the string for the user to hold",
+            "spinning motion when thrown and pulled back"
+      ]
+}
