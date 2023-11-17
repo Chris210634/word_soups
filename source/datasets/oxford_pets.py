@@ -204,13 +204,9 @@ class OxfordPets(DatasetBase):
         so as a hack, I need to remove the prefix to the path that is specific
         to my environment.
 
-        Example:
-        /scratch/cliao25/imagenet/images/train/n01440764/n01440764_2920.JPEG
-        should become 
-        os.path.join(args.data, imagenet, 'images/train/n01440764/n01440764_2920.JPEG')
         '''
 
-        old_prefix = '/scratch/cliao25/' + dataset_dir + '/'
+        old_prefix = dataset_dir + '/'
         out = []
         for dset in dsets:
             dset_new = []

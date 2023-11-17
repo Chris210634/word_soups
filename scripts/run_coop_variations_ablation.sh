@@ -1,7 +1,4 @@
-#!/bin/bash -l
-mkdir /scratch/cliao25
-module load python3/3.8.10 pytorch/1.13.1
-sh copy_data.sh
+#!/bin/bash
 
 # kgcoop M=1 M=2
 python main_crossdataset.py --seed 1 --use_cached_image_features 1 --train_text_encoder 0 --train_visual_encoder 0 --visual_prompt_depth 0 --text_prompt_depth 1 --lr 4e-5 --loss kgcoop --init_lam 8.0 --shallow_prompt_init "a" > run_kgcoop_M1.o

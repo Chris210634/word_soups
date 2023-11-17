@@ -1,7 +1,4 @@
-#!/bin/bash -l
-mkdir /scratch/cliao25
-module load python3/3.8.10 pytorch/1.13.1
-sh copy_data.sh
+#!/bin/bash
 
 for M in 8 4 2 1;
 do

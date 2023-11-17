@@ -1,7 +1,4 @@
 #!/bin/bash
-mkdir /scratch/cliao25
-module load python3/3.8.10 pytorch/1.13.1
-sh copy_data.sh
 
 sh descriptor_soup_varying_m.sh 1 > descriptor_soup_1.o
 sh descriptor_soup_varying_m.sh 2 > descriptor_soup_2.o

@@ -80,7 +80,7 @@ def get_imagenet_labelstrings():
     
 def get_imagenet_val_dataset(
     xform, 
-    imagenet_root = '/scratch/cliao25/imagenet/',
+    imagenet_root,
     imagenet_val_csv = 'source/LOC_val_solution.csv',
     split=True
 ):

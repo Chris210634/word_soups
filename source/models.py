@@ -499,7 +499,6 @@ class ShallowPrompt(torch.nn.Module):
         # import open_clip
         # modelname='ViT-B-16'
         # tokenizer = open_clip.get_tokenizer(modelname)
-        # cache_dir='/projectnb/textconv/cliao25/data'
         # open_clip_model, _, _ = open_clip.create_model_and_transforms(
         #     modelname, 
         #     pretrained='openai',

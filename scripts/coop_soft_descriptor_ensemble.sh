@@ -1,7 +1,4 @@
-#!/bin/bash -l
-mkdir /scratch/cliao25
-module load python3/3.8.10 pytorch/1.13.1
-sh copy_data.sh
+#!/bin/bash 
 
 python train_soft_descriptors.py --lr 8e-5 \
 --descriptor_file figures/8_random_10_token_word_chains_seed1.list \
