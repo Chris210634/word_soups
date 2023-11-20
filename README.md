@@ -56,17 +56,22 @@ Use `preprocess/generate_description_features.py`.
 This python file reads from `preprocess/descriptions.list`, 
 which is a sorted list of 4227 unique GPT descriptors. They begin with a space and end in a period.
 Currently, we use a pretrained model for these features.
-Run:
 
-```python preprocess/generate_description_features.py --dataset ImageNet```
+**Run:** `python preprocess/generate_description_features.py --dataset ImageNet`
 
 This will save the tuple of description strings, 
 description features in `cache/description_features__ViT-B-16_openai.tensor`
 
 ### (2) Calculate greedy descriptor soups
-This needs to be done for each random seed of ImageNet training split! Run:
+This needs to be done for each random seed of ImageNet training split! 
 
-```python preprocess/get_greedy_descriptor_soup.py --dataset ImageNet --seed 1```
+**Run:** 
+
+```bash
+python preprocess/get_greedy_descriptor_soup.py --dataset ImageNet --seed 1
+python preprocess/get_greedy_descriptor_soup.py --dataset ImageNet --seed 2
+python preprocess/get_greedy_descriptor_soup.py --dataset ImageNet --seed 3
+```
 
 This will save the greedily selected descriptors in `cache/good_descriptions_seed1__ViT-B-16_openai.list` as a list.
 
@@ -74,16 +79,22 @@ This will save the greedily selected descriptors in `cache/good_descriptions_see
 --------------------
 
 ### (1) Get Word Features
-`preprocess/words.list` contains 10,000 most common English words minus swear words. They have a space prepended. We can use the same `preprocess/generate_description_features.py` to generate the text features from individual words. For pretrained model, run:
+`preprocess/words.list` contains 10,000 most common English words minus swear words. They have a space prepended. We can use the same `preprocess/generate_description_features.py` to generate the text features from individual words.
 
-```python preprocess/generate_description_features.py --dataset ImageNet --descriptions preprocess/words.list --savename word_features ```
+**Run:** ```python preprocess/generate_description_features.py --dataset ImageNet --descriptions preprocess/words.list --savename word_features ```
 
 This will save the tuple or words and word features in `cache/word_features__ViT-B-16_openai.tensor`
 
 ### (2) Calculate greedy word soups
-This needs to be done for each random seed of ImageNet training split! Run:
+This needs to be done for each random seed of ImageNet training split!
 
-```python preprocess/get_greedy_word_soup.py --dataset ImageNet --seed 1 --n_descriptors 250```
+**Run:**
+
+```bash
+python preprocess/get_greedy_word_soup.py --dataset ImageNet --seed 1 --n_descriptors 250
+python preprocess/get_greedy_word_soup.py --dataset ImageNet --seed 2 --n_descriptors 250
+python preprocess/get_greedy_word_soup.py --dataset ImageNet --seed 3 --n_descriptors 250
+```
 
 This will save the greedily selected descriptors in `cache/word_soup_descriptors_seed1__ViT-B-16_openai.list` as a list.
 
