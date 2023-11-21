@@ -112,13 +112,13 @@ Results are outputted in CSV format at the end of the experiment. You can copy a
 For all ZS methods presented in Table 3 of the paper (Open-AI handcrafted ensemble, GPT, descriptor soup, token offest, word soup), run: 
 
 ```bash
-sh run_pt_eval.sh 0 ViT-B-16 openai 512
+sh scripts/run_pt_eval.sh 0 ViT-B-16 openai 512
 ```
 
 For WaffleCLIP with 16 members, run:
 
 ```bash
-sh waffle_descriptors_eval.sh 16
+sh scripts/waffle_descriptors_eval.sh 16
 ```
 
 ### Few-shot OOD comparisons
