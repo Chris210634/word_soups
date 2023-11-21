@@ -101,63 +101,45 @@ This will save the greedily selected descriptors in `cache/word_soup_descriptors
 ## 🧪 Baselines
 -----------------
 
-### CE
+Results are outputted in CSV format at the end of the experiment. You can copy and paste directly into a spreadsheet.
 
-Descriptor soup
+### Zero-shot comparisons
 
-```bash
-python main_crossdataset.py --save_model 1 --seed 1 \
---descriptor_file cache/good_descriptions_seed1__ViT-B-16_openai.list \
---openai_eval 1 \
---gpt_centroid_eval 1 \
---gpt_score_averaging_eval 1 \
---soup_eval 1 \
---token_offset_eval 1 > ce_1.o
-```
-
-word soup
+For all ZS methods presented in Table 3 of the paper (Open-AI handcrafted ensemble, GPT, descriptor soup, token offest, word soup), run: 
 
 ```bash
-python main_crossdataset.py --eval_only 1 --seed 1 \
---checkpoint {} \
---descriptor_file cache/word_soup_descriptors_seed1__ViT-B-16_openai.list \
---soup_eval 1 \
---token_offset_eval 1 > ce_1.word_soup.o
+sh run_pt_eval.sh 0 ViT-B-16 openai 512
 ```
 
-(New 10/8) combined descriptor soup and word soup evaluation without needing to pass in descriptor list file name:
+For WaffleCLIP with 16 members, run:
 
 ```bash
-python main_crossdataset.py --eval_only 1 --seed 1 \
---use_cached_image_features 1 \
---openai_eval 1 \
---gpt_centroid_eval 1 \
---gpt_score_averaging_eval 1 \
---soup_eval 1 \
---token_offset_eval 1
+sh waffle_descriptors_eval.sh 16
 ```
 
-### learning rate tuning
+### Few-shot OOD comparisons
 
-Use `run_ce.sh`, `run_coop.sh`, `run_maple.sh`, and `run_clipood.sh` to tune the learning rate.
-They run three seeds. Use `parse.ipynb` to parse the output logs into something you ca paste into a spreadsheet. Example usage:
+These scripts train on 3 random splits of 16-shot ImageNet-1K. **"XD Mean"** stands for average test accuracy on 10 OOD ddatasets. **"DG Mean"** stands for average test accuracy on 4 domain-shifted versions of ImageNet. You can verify these results by running the indicated bash script and pasting the CSV-formatted results at the end of the output into a spreadsheet.
 
-```bash
-sh run_coop.sh 0.0001 ViT-B-32 512
-```
-
-current best learning rates:
-
-| Method | ViT-B-32 | ViT-B-16 | ViT-L-14 |
-| ------ | -------- | -------- | -------- | 
-| CE     | 2e-5 | 2e-5 | 2e-5 |
-| Clipood | 5e-6 | 2e-5 | 2e-5 |
-| CoOp   | 8e-5 | 8e-5 | 8e-5 |
-| MaPLe | 1 | 1 | 1 |
-
-### Evaluation
-
-Once learning rate has been tuned, run the full evaluation with the best learning rate for each,use `*_with_eval.sh` scripts.
+| Method | Command to run | XD Mean | DG Mean |
+| ------ | -------------- | ------ | ------ |
+| CLIP-adapter | `scripts/run_adapter.sh 6e-3 ViT-B-16 512` | 65.02 | 58.12 |
+| bitfit | `scripts/bitfit.sh 1.25e-4 ViT-B-16 512` | 66.05 | 59.12 |
+| Cross Entropy | `scripts/run_ce.sh 2e-5 ViT-B-16 512` | 66.80 | 60.39 |
+| Cross Entropy + word soup + diversity loss | `scripts/run_ce_regularized.sh 0.25 10` | 67.43 | 61.32 |
+| ClipOOD | `scripts/run_clipood.sh 2e-5 ViT-B-16 512` | 66.50 | 60.47 |
+| ClipOOD + word soup + diversity loss | `scripts/run_clipood_regularized.sh 0.25 10` | 67.42 | 61.23 |
+| CoOp | `scripts/run_coop.sh 8e-5 ViT-B-16 512` | 66.52 | 59.25 |
+| CoOp + word soup + diversity loss | `scripts/run_coop_regularized.sh 0.25 10` | 67.30 | 60.25 |
+| KgCoOp |  `scripts/run_kgcoop.sh 4e-5 ViT-B-16 512` | 66.16 | 58.64 |
+| LoRA |  `scripts/run_lora.sh 1e-5 ViT-B-16 512` | 66.19 | 57.93 |
+| MaPLe |  `scripts/run_maple.sh 0.025 ViT-B-16 512` | 66.44 | 59.32 |
+| MaPLe + word soup + diversity loss |  `scripts/run_maple_regularized.sh` | 66.65 | 60.20 |
+| ProDA |  `scripts/run_proda.sh 3.2e-4 ViT-B-16 512` | 66.23 | 58.83 |
+| ProGrad |  `scripts/run_prograd.sh 1.28e-3 ViT-B-16 512` | 66.48 | 58.96 |
+| ResBlock-adapter | `scripts/run_resblock_adapter.sh 2.5e-3 ViT-B-16 512` | 65.55 | 59.48 |
+| SSF | `scripts/run_ssf.sh 1e-4 ViT-B-16 512` | 65.86 | 58.44 |
+| VPT | `scripts/run_vpt_deep.sh 0.8 ViT-B-16 512` | 65.16 | 58.42 |
 
 ## 🧪 Base to novel setting
 -----------------------------
