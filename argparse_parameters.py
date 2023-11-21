@@ -13,7 +13,7 @@ def get_arg_parser():
     parser.add_argument('--d', default = 512, type =int) # dimension of CLIP embedding
     parser.add_argument('--modelname', default = 'ViT-B-16', type =str)
     parser.add_argument('--pretrained', default = 'openai', type =str)
-    parser.add_argument('--cache_dir', default = '/data', type =str)
+    parser.add_argument('--cache_dir', default = "", type =str)
     parser.add_argument('--data_dir', default = "", type =str)
     
     parser.add_argument('--n_epochs', default = 1, type = int)
