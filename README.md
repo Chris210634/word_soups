@@ -75,6 +75,8 @@ python preprocess/get_greedy_descriptor_soup.py --dataset ImageNet --seed 3
 
 This will save the greedily selected descriptors in `cache/good_descriptions_seed1__ViT-B-16_openai.list` as a list.
 
+Proceed to **Zero-shot comparisons** section for evaluation.
+
 ## 🍜 Word soups
 --------------------
 
@@ -97,6 +99,8 @@ python preprocess/get_greedy_word_soup.py --dataset ImageNet --seed 3 --n_descri
 ```
 
 This will save the greedily selected descriptors in `cache/word_soup_descriptors_seed1__ViT-B-16_openai.list` as a list.
+
+Proceed to **Zero-shot comparisons** section for evaluation.
 
 ## 🧪 Baselines
 -----------------
