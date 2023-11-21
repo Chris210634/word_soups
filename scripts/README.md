@@ -41,11 +41,11 @@ sh waffle_descriptors_eval.sh 16
 
 ### Other scripts
 
-run_ce_with_eval.btn.sh
-run_ce_with_eval.sh
-run_clipood_with_eval.btn.sh
-run_clipood_with_eval.sh
-run_coop_with_eval.btn.sh
-run_coop_with_eval.sh
-run_maple_with_eval.btn.sh
-run_maple_with_eval.sh
+`run_ce_with_eval.btn.sh`: Base-to-new evaluation with cross entropy training.
+`run_ce_with_eval.sh`: Evaluate all zero-shot methods on top of cross-entropy-trained model.
+`run_clipood_with_eval.btn.sh`: Base-to-new evaluation with ClipOOD training.
+`run_clipood_with_eval.sh`: Evaluate all zero-shot methods on top of clipood-trained model.
+`run_coop_with_eval.btn.sh`: Base-to-new evaluation with CoOp training.
+`run_coop_with_eval.sh`: Evaluate all zero-shot methods on top of coop-trained model.
+`run_maple_with_eval.btn.sh`: Base-to-new evaluation with Maple training.
+`run_maple_with_eval.sh`: Evaluate all zero-shot methods on top of coop-trained model.
