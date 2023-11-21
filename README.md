@@ -47,6 +47,13 @@ data/
 Alternatively, follow the download instructions here (some dataset links are stale):
 [installing datasets](https://github.com/muzairkhattak/multimodal-prompt-learning/blob/main/docs/DATASETS.md)
 
+Modify the following two lines in `argparse_parameters.py` to reflect where you have your `data/` dir and where you want the pretrained CLIP weights to be cached (which could be many gigabytes)
+
+```python
+parser.add_argument('--cache_dir', default = "", type =str) # set to directory where you want large pretrained model weights to be cached
+parser.add_argument('--data_dir', default = "", type =str)  # set to parent directory of data/
+```
+
 ## 🍜 Descriptor soups
 ---------------------------
 
