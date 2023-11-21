@@ -17,7 +17,7 @@ waffle_descriptors_eval.sh
 | ClipOOD | `scripts/run_clipood.sh 2e-5 ViT-B-16 512` |
 | ClipOOD + word soup + diversity loss | `scripts/run_clipood_regularized.sh 0.25 10` |
 | CoOp | `scripts/run_coop.sh 8e-5 ViT-B-16 512` |
-| CoOp + word soup + diversity loss | `scripts/run_clipood_regularized.sh 0.25 10` |
+| CoOp + word soup + diversity loss | `scripts/run_coop_regularized.sh 0.25 10` |
 | KgCoOp |  `scripts/run_kgcoop.sh 4e-5 ViT-B-16 512` |
 | LoRA |  `scripts/run_lora.sh 1e-5 ViT-B-16 512` |
 | MaPLe |  `scripts/run_maple.sh 0.025 ViT-B-16 512` |
