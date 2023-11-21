@@ -1,0 +1,108 @@
+Namespace(accum_iter=1, adapter=0, adaptive_margin=0.0, bitfit=0, bs=64, cache_dir='/projectnb/textconv/cliao25/data', checkpoint='', d=512, data_dir='/scratch/cliao25', dataset='ImageNet', ema=0.995, eval_only=0, init_lam=0.0, iters_per_epoch=750, label_smoothing=0.0, layer_start_t=9, layer_start_v=9, lora=0, loss='ce', lr=2e-05, lr_decay=0.0, maple=0, margin=0.0, modelname='ViT-B-16', n_descriptors=-1, n_epochs=1, optimizer='sgd', pretrained='openai', prompt_lr_multi=10.0, prompt_rand_init=0, rank=4, resblock_adapter=0, samples_per_class=1, save_model=0, seed=1, shallow_prompt_init='a photo of', shots=16, skip_ema_iters=0, ssf=0, subsample_classes='all', suffix_string='', teacher_temp=100.0, temp=60.0, text_prompt_depth=1, text_prompt_length=3, train_text_encoder=1, train_visual_encoder=1, train_with_descriptors=0, visual_prompt_depth=0, visual_prompt_length=3, wd=1e-05)
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_1.pkl
+len(dset_base_train):  16000
+number of base classes:  1000
+prompt tuning with prompt length M=3
+shape of text prompt token vectors: torch.Size([3, 512])
+shape of prefix token vectors: torch.Size([1, 512])
+100%|█████████████████████████████████████████| 250/250 [00:31<00:00,  8.00it/s]
+loading features from cache/description_features__ViT-B-16_openai.tensor.
+description_features.shape:  torch.Size([4227, 1000, 512])
+calculating individual accuracies of descriptors
+100%|██████████████████████████████████████| 4227/4227 [00:05<00:00, 799.58it/s]
+max individual acc:  69.92500424385071
+best descriptor: 
+ which typically brightly colored.
+calculating greedy soup starting with best descriptor
+  0%|                                                  | 0/4226 [00:00<?, ?it/s]acc now:  70.01875042915344  which has usually white or off-white.
+acc now:  70.06875276565552  which is a long, low-slung body.
+acc now:  70.2750027179718  which can vary in size from small to large.
+acc now:  70.28125524520874  which has stocky body.
+acc now:  70.33750414848328  which is a large, rectangular body.
+acc now:  70.41875123977661  which is a flat, segmented body.
+  5%|█▉                                     | 216/4226 [00:00<00:17, 232.52it/s]acc now:  70.43125629425049  which can be brightly colored or patterned.
+acc now:  70.48125267028809  which is a domain name or URL.
+  6%|██▏                                    | 240/4226 [00:01<00:17, 223.64it/s]acc now:  70.50000429153442  which can be made from a variety of materials, including cloth, leather, or nylon.
+acc now:  70.53125500679016  which is a thick, fleshy body.
+  6%|██▍                                    | 263/4226 [00:01<00:19, 204.19it/s]acc now:  70.54375410079956  which may be brightly colored or patterned.
+ 10%|███▋                                   | 403/4226 [00:02<00:25, 150.21it/s]acc now:  70.5875039100647  which has no antennae.
+ 34%|█████████████                         | 1454/4226 [00:09<00:18, 146.99it/s]acc now:  70.6000030040741  which has usually bearskin or shako.
+100%|██████████████████████████████████████| 4226/4226 [00:29<00:00, 144.15it/s]
+number of descriptors in soup:  14
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:499: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:499: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+Namespace(accum_iter=1, adapter=0, adaptive_margin=0.0, bitfit=0, bs=64, cache_dir='/projectnb/textconv/cliao25/data', checkpoint='', d=512, data_dir='/scratch/cliao25', dataset='ImageNet', ema=0.995, eval_only=0, init_lam=0.0, iters_per_epoch=750, label_smoothing=0.0, layer_start_t=9, layer_start_v=9, lora=0, loss='ce', lr=2e-05, lr_decay=0.0, maple=0, margin=0.0, modelname='ViT-B-16', n_descriptors=-1, n_epochs=1, optimizer='sgd', pretrained='openai', prompt_lr_multi=10.0, prompt_rand_init=0, rank=4, resblock_adapter=0, samples_per_class=1, save_model=0, seed=2, shallow_prompt_init='a photo of', shots=16, skip_ema_iters=0, ssf=0, subsample_classes='all', suffix_string='', teacher_temp=100.0, temp=60.0, text_prompt_depth=1, text_prompt_length=3, train_text_encoder=1, train_visual_encoder=1, train_with_descriptors=0, visual_prompt_depth=0, visual_prompt_length=3, wd=1e-05)
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_2.pkl
+len(dset_base_train):  16000
+number of base classes:  1000
+prompt tuning with prompt length M=3
+shape of text prompt token vectors: torch.Size([3, 512])
+shape of prefix token vectors: torch.Size([1, 512])
+100%|█████████████████████████████████████████| 250/250 [00:21<00:00, 11.82it/s]
+loading features from cache/description_features__ViT-B-16_openai.tensor.
+description_features.shape:  torch.Size([4227, 1000, 512])
+calculating individual accuracies of descriptors
+100%|██████████████████████████████████████| 4227/4227 [00:05<00:00, 787.81it/s]
+max individual acc:  70.30625343322754
+best descriptor: 
+ which is a central focus or object of worship.
+calculating greedy soup starting with best descriptor
+  0%|                                                  | 0/4226 [00:00<?, ?it/s]acc now:  70.34375071525574  which has usually white or off-white.
+acc now:  70.39375305175781  which is a curved or rectangular shape.
+acc now:  70.41250467300415  which has usually white or brightly colored.
+acc now:  70.41875123977661  which may have special meaning or symbolism.
+acc now:  70.45000195503235  which typically has a yellow or brownish color.
+acc now:  70.53125500679016  which has large size.
+acc now:  70.56875228881836  which typically has a large, open bed in the back.
+acc now:  70.66250443458557  which has people often in close proximity.
+acc now:  70.66875100135803  which is a short neck.
+  0%|▏                                       | 21/4226 [00:00<00:20, 208.67it/s]acc now:  70.68125605583191  which has usually green or yellow.
+  1%|▍                                       | 42/4226 [00:00<00:25, 162.47it/s]acc now:  70.69375514984131  which typically orange or brown.
+  3%|█▎                                     | 136/4226 [00:00<00:28, 143.71it/s]acc now:  70.71250081062317  which has long body.
+ 13%|█████                                  | 546/4226 [00:03<00:26, 139.47it/s]acc now:  70.71875333786011  which is a long, horizontal seat.
+ 27%|██████████▏                           | 1134/4226 [00:08<00:23, 130.72it/s]acc now:  70.73750495910645  which can be various colors, patterns, and styles.
+ 36%|█████████████▊                        | 1538/4226 [00:11<00:21, 123.45it/s]acc now:  70.7437515258789  which has small to medium-sized dog.
+ 45%|████████████████▉                     | 1889/4226 [00:14<00:19, 117.56it/s]acc now:  70.7562506198883  which has black, blue, brindle, fawn, or harlequin coloration.
+100%|██████████████████████████████████████| 4226/4226 [00:35<00:00, 119.06it/s]
+number of descriptors in soup:  17
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:499: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:499: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+Namespace(accum_iter=1, adapter=0, adaptive_margin=0.0, bitfit=0, bs=64, cache_dir='/projectnb/textconv/cliao25/data', checkpoint='', d=512, data_dir='/scratch/cliao25', dataset='ImageNet', ema=0.995, eval_only=0, init_lam=0.0, iters_per_epoch=750, label_smoothing=0.0, layer_start_t=9, layer_start_v=9, lora=0, loss='ce', lr=2e-05, lr_decay=0.0, maple=0, margin=0.0, modelname='ViT-B-16', n_descriptors=-1, n_epochs=1, optimizer='sgd', pretrained='openai', prompt_lr_multi=10.0, prompt_rand_init=0, rank=4, resblock_adapter=0, samples_per_class=1, save_model=0, seed=3, shallow_prompt_init='a photo of', shots=16, skip_ema_iters=0, ssf=0, subsample_classes='all', suffix_string='', teacher_temp=100.0, temp=60.0, text_prompt_depth=1, text_prompt_length=3, train_text_encoder=1, train_visual_encoder=1, train_with_descriptors=0, visual_prompt_depth=0, visual_prompt_length=3, wd=1e-05)
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_3.pkl
+len(dset_base_train):  16000
+number of base classes:  1000
+prompt tuning with prompt length M=3
+shape of text prompt token vectors: torch.Size([3, 512])
+shape of prefix token vectors: torch.Size([1, 512])
+100%|█████████████████████████████████████████| 250/250 [00:21<00:00, 11.82it/s]
+loading features from cache/description_features__ViT-B-16_openai.tensor.
+description_features.shape:  torch.Size([4227, 1000, 512])
+calculating individual accuracies of descriptors
+100%|██████████████████████████████████████| 4227/4227 [00:05<00:00, 794.26it/s]
+max individual acc:  70.15625238418579
+best descriptor: 
+ which can also be used for pleasure trips or as a tourist attraction.
+calculating greedy soup starting with best descriptor
+  0%|                                                  | 0/4226 [00:00<?, ?it/s]acc now:  70.50000429153442  which can vary in size from small to large.
+acc now:  70.61875462532043  which has people often in close proximity.
+acc now:  70.7562506198883  which may have pictures or not.
+acc now:  70.78750133514404  which can be indoors or outdoors.
+acc now:  70.80000042915344  which may have a symbolic meaning.
+acc now:  70.81250548362732  which has dark brown or black in coloration.
+acc now:  70.89375257492065  which typically used for sleeping or resting.
+  1%|▌                                       | 53/4226 [00:00<00:18, 220.05it/s]acc now:  70.91875076293945  which may have decorative elements such as lights or flags.
+  6%|██▎                                    | 253/4226 [00:01<00:21, 187.01it/s]acc now:  70.98125219345093  which has web content.
+100%|██████████████████████████████████████| 4226/4226 [00:24<00:00, 174.20it/s]
+number of descriptors in soup:  10

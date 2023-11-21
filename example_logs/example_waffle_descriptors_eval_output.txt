@@ -1,0 +1,481 @@
+Namespace(accum_iter=1, adapter=0, adaptive_margin=0.0, bitfit=0, bs=64, cache_dir='/projectnb/textconv/cliao25/data', checkpoint='', d=512, data_dir='/scratch/cliao25', dataset='', descriptor_file='cache/waffle_descriptors_512_count.list', ema=0.995, eval_only=1, gpt_centroid_eval=0, gpt_score_averaging_eval=0, init_lam=0.0, iters_per_epoch=750, label_smoothing=0.0, layer_start_t=9, layer_start_v=9, lora=0, loss='ce', lr=2e-05, lr_decay=0.0, maple=0, margin=0.0, modelname='ViT-B-16', n_descriptors=16, n_epochs=1, openai_eval=0, optimizer='sgd', pretrained='openai', prompt_lr_multi=10.0, prompt_rand_init=0, rand_seed=0, rank=4, resblock_adapter=0, samples_per_class=1, save_model=0, score_averaging=0, seed=1, shallow_prompt_init='a photo of', shots=16, shuffle_descriptors=1, skip_ema_iters=0, soup_eval=1, ssf=0, subsample_classes='all', suffix_string='', teacher_temp=100.0, temp=60.0, text_prompt_depth=1, text_prompt_length=3, token_offset_eval=0, train_text_encoder=1, train_visual_encoder=1, train_with_descriptors=0, use_cached_image_features=0, use_pretrained_image_features=0, visual_prompt_depth=0, visual_prompt_length=3, wd=1e-05, zs_average=0)
+CHOSEN DESCRIPTORS: 
+, which has ebUpI, dr-tD.
+, which has mascar operat.
+, which has propel sword.
+, which has instru patter.
+, which has )x(sr, /B9e1.
+, which has -mjqY, sFWGq.
+, which has rxQuq, 9jaSG.
+, which has transa wider.
+, which has fang-l bullet.
+, which has Brc2M, yd0/z.
+, which has AeuSi, vgasn.
+, which has -B)b/, jYAq(.
+, which has knob scient.
+, which has privac loft.
+, which has Md2Kc, jtF:I.
+, which has decal electr.
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_1.pkl
+len(dset_base_train):  16000
+number of base classes:  1000
+prompt tuning with prompt length M=3
+shape of text prompt token vectors: torch.Size([3, 512])
+shape of prefix token vectors: torch.Size([1, 512])
+Calculated 16 description vectors
+Runing Evaluation ...
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_1.pkl
+ImageNet has 50000 test samples
+loaded image features from cache/image_features.y_truth.ImageNetViT-B-16openai.tup
+a photo of ZS
+acc:  67.10999608039856
+Calculated 16 description vectors
+acc:  68.32000017166138
+[67.10999608039856, 68.32000017166138]
+Reading split from /scratch/cliao25/caltech-101/split_zhou_Caltech101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/caltech-101/shot_16-seed_1.pkl
+Caltech101 has 2465 test samples
+loaded image features from cache/image_features.y_truth.Caltech101ViT-B-16openai.tup
+a photo of ZS
+acc:  93.34685802459717
+Calculated 16 description vectors
+acc:  93.30629110336304
+[93.34685802459717, 93.30629110336304]
+Reading split from /scratch/cliao25/oxford_pets/split_zhou_OxfordPets.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_pets/shot_16-seed_1.pkl
+OxfordPets has 3669 test samples
+loaded image features from cache/image_features.y_truth.OxfordPetsViT-B-16openai.tup
+a photo of ZS
+acc:  88.98882269859314
+Calculated 16 description vectors
+acc:  88.57999444007874
+[88.98882269859314, 88.57999444007874]
+Reading split from /scratch/cliao25/stanford_cars/split_zhou_StanfordCars.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/stanford_cars/shot_16-seed_1.pkl
+StanfordCars has 8041 test samples
+loaded image features from cache/image_features.y_truth.StanfordCarsViT-B-16openai.tup
+a photo of ZS
+acc:  65.37744402885437
+Calculated 16 description vectors
+acc:  65.29039144515991
+[65.37744402885437, 65.29039144515991]
+Reading split from /scratch/cliao25/oxford_flowers/split_zhou_OxfordFlowers.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_flowers/shot_16-seed_1.pkl
+Flowers102 has 2463 test samples
+loaded image features from cache/image_features.y_truth.Flowers102ViT-B-16openai.tup
+a photo of ZS
+acc:  70.97036242485046
+Calculated 16 description vectors
+acc:  72.02598452568054
+[70.97036242485046, 72.02598452568054]
+Reading split from /scratch/cliao25/food-101/split_zhou_Food101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/food-101/shot_16-seed_1.pkl
+Food101 has 30300 test samples
+loaded image features from cache/image_features.y_truth.Food101ViT-B-16openai.tup
+a photo of ZS
+acc:  85.68646907806396
+Calculated 16 description vectors
+acc:  85.91418862342834
+[85.68646907806396, 85.91418862342834]
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/fgvc_aircraft/shot_16-seed_1.pkl
+FGVCAircraft has 3333 test samples
+loaded image features from cache/image_features.y_truth.FGVCAircraftViT-B-16openai.tup
+a photo of ZS
+acc:  24.992498755455017
+Calculated 16 description vectors
+acc:  25.562554597854614
+[24.992498755455017, 25.562554597854614]
+Reading split from /scratch/cliao25/sun397/split_zhou_SUN397.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/sun397/shot_16-seed_1.pkl
+SUN397 has 19850 test samples
+loaded image features from cache/image_features.y_truth.SUN397ViT-B-16openai.tup
+a photo of ZS
+acc:  63.183873891830444
+Calculated 16 description vectors
+acc:  66.31737947463989
+[63.183873891830444, 66.31737947463989]
+Reading split from /scratch/cliao25/dtd/split_zhou_DescribableTextures.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/dtd/shot_16-seed_1.pkl
+DTD has 1692 test samples
+loaded image features from cache/image_features.y_truth.DTDViT-B-16openai.tup
+a photo of ZS
+acc:  43.557921051979065
+Calculated 16 description vectors
+acc:  44.38534379005432
+[43.557921051979065, 44.38534379005432]
+Reading split from /scratch/cliao25/eurosat/split_zhou_EuroSAT.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/eurosat/shot_16-seed_1.pkl
+EuroSAT has 8100 test samples
+loaded image features from cache/image_features.y_truth.EuroSATViT-B-16openai.tup
+a photo of ZS
+acc:  46.703702211380005
+Calculated 16 description vectors
+acc:  48.592591285705566
+[46.703702211380005, 48.592591285705566]
+Reading split from /scratch/cliao25/ucf101/split_zhou_UCF101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/ucf101/shot_16-seed_1.pkl
+UCF101 has 3783 test samples
+loaded image features from cache/image_features.y_truth.UCF101ViT-B-16openai.tup
+a photo of ZS
+acc:  67.38038063049316
+Calculated 16 description vectors
+acc:  68.09410452842712
+[67.38038063049316, 68.09410452842712]
+ImageNetV2 has 10000 test samples
+loaded image features from cache/image_features.y_truth.ImageNetV2ViT-B-16openai.tup
+a photo of ZS
+acc:  60.96999645233154
+Calculated 16 description vectors
+acc:  62.02999949455261
+[60.96999645233154, 62.02999949455261]
+ImageNetSketch has 50889 test samples
+loaded image features from cache/image_features.y_truth.ImageNetSketchViT-B-16openai.tup
+a photo of ZS
+acc:  46.55819535255432
+Calculated 16 description vectors
+acc:  48.654913902282715
+[46.55819535255432, 48.654913902282715]
+ImageNetA has 7500 test samples
+loaded image features from cache/image_features.y_truth.ImageNetAViT-B-16openai.tup
+a photo of ZS
+acc:  47.24000096321106
+Calculated 16 description vectors
+acc:  49.97333288192749
+[47.24000096321106, 49.97333288192749]
+ImageNetR has 30000 test samples
+loaded image features from cache/image_features.y_truth.ImageNetRViT-B-16openai.tup
+a photo of ZS
+acc:  74.10666942596436
+Calculated 16 description vectors
+acc:  76.2066662311554
+[74.10666942596436, 76.2066662311554]
+Results:
+,ImageNet,Caltech101,OxfordPets,StanfordCars,Flowers102,Food101,FGVCAircraft,SUN397,DTD,EuroSAT,UCF101,ImageNetV2,ImageNetSketch,ImageNetA,ImageNetR,
+ZS,67.10999608039856,93.34685802459717,88.98882269859314,65.37744402885437,70.97036242485046,85.68646907806396,24.992498755455017,63.183873891830444,43.557921051979065,46.703702211380005,67.38038063049316,60.96999645233154,46.55819535255432,47.24000096321106,74.10666942596436,
+soup,68.32000017166138,93.30629110336304,88.57999444007874,65.29039144515991,72.02598452568054,85.91418862342834,25.562554597854614,66.31737947463989,44.38534379005432,48.592591285705566,68.09410452842712,62.02999949455261,48.654913902282715,49.97333288192749,76.2066662311554,
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:499: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:499: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+Namespace(accum_iter=1, adapter=0, adaptive_margin=0.0, bitfit=0, bs=64, cache_dir='/projectnb/textconv/cliao25/data', checkpoint='', d=512, data_dir='/scratch/cliao25', dataset='', descriptor_file='cache/waffle_descriptors_512_count.list', ema=0.995, eval_only=1, gpt_centroid_eval=0, gpt_score_averaging_eval=0, init_lam=0.0, iters_per_epoch=750, label_smoothing=0.0, layer_start_t=9, layer_start_v=9, lora=0, loss='ce', lr=2e-05, lr_decay=0.0, maple=0, margin=0.0, modelname='ViT-B-16', n_descriptors=16, n_epochs=1, openai_eval=0, optimizer='sgd', pretrained='openai', prompt_lr_multi=10.0, prompt_rand_init=0, rand_seed=0, rank=4, resblock_adapter=0, samples_per_class=1, save_model=0, score_averaging=0, seed=2, shallow_prompt_init='a photo of', shots=16, shuffle_descriptors=1, skip_ema_iters=0, soup_eval=1, ssf=0, subsample_classes='all', suffix_string='', teacher_temp=100.0, temp=60.0, text_prompt_depth=1, text_prompt_length=3, token_offset_eval=0, train_text_encoder=1, train_visual_encoder=1, train_with_descriptors=0, use_cached_image_features=0, use_pretrained_image_features=0, visual_prompt_depth=0, visual_prompt_length=3, wd=1e-05, zs_average=0)
+CHOSEN DESCRIPTORS: 
+, which has VCgK-, 3RNl9.
+, which has db:j(, A6hKd.
+, which has pilast yellow.
+, which has oZZzi, eE57n.
+, which has lOcrr, SmpAf.
+, which has iOy'c, LopaU.
+, which has footba pedest.
+, which has dA46', b0J:y.
+, which has city carrie.
+, which has torped meanin.
+, which has jaws pour.
+, which has DcF)C, 'wqWu.
+, which has papers classr.
+, which has street road.
+, which has toilet discol.
+, which has planks browni.
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_2.pkl
+len(dset_base_train):  16000
+number of base classes:  1000
+prompt tuning with prompt length M=3
+shape of text prompt token vectors: torch.Size([3, 512])
+shape of prefix token vectors: torch.Size([1, 512])
+Calculated 16 description vectors
+Runing Evaluation ...
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_1.pkl
+ImageNet has 50000 test samples
+loaded image features from cache/image_features.y_truth.ImageNetViT-B-16openai.tup
+a photo of ZS
+acc:  67.10999608039856
+Calculated 16 description vectors
+acc:  68.50999593734741
+[67.10999608039856, 68.50999593734741]
+Reading split from /scratch/cliao25/caltech-101/split_zhou_Caltech101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/caltech-101/shot_16-seed_1.pkl
+Caltech101 has 2465 test samples
+loaded image features from cache/image_features.y_truth.Caltech101ViT-B-16openai.tup
+a photo of ZS
+acc:  93.34685802459717
+Calculated 16 description vectors
+acc:  93.75253319740295
+[93.34685802459717, 93.75253319740295]
+Reading split from /scratch/cliao25/oxford_pets/split_zhou_OxfordPets.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_pets/shot_16-seed_1.pkl
+OxfordPets has 3669 test samples
+loaded image features from cache/image_features.y_truth.OxfordPetsViT-B-16openai.tup
+a photo of ZS
+acc:  88.98882269859314
+Calculated 16 description vectors
+acc:  88.7435257434845
+[88.98882269859314, 88.7435257434845]
+Reading split from /scratch/cliao25/stanford_cars/split_zhou_StanfordCars.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/stanford_cars/shot_16-seed_1.pkl
+StanfordCars has 8041 test samples
+loaded image features from cache/image_features.y_truth.StanfordCarsViT-B-16openai.tup
+a photo of ZS
+acc:  65.37744402885437
+Calculated 16 description vectors
+acc:  65.61373472213745
+[65.37744402885437, 65.61373472213745]
+Reading split from /scratch/cliao25/oxford_flowers/split_zhou_OxfordFlowers.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_flowers/shot_16-seed_1.pkl
+Flowers102 has 2463 test samples
+loaded image features from cache/image_features.y_truth.Flowers102ViT-B-16openai.tup
+a photo of ZS
+acc:  70.97036242485046
+Calculated 16 description vectors
+acc:  72.14778661727905
+[70.97036242485046, 72.14778661727905]
+Reading split from /scratch/cliao25/food-101/split_zhou_Food101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/food-101/shot_16-seed_1.pkl
+Food101 has 30300 test samples
+loaded image features from cache/image_features.y_truth.Food101ViT-B-16openai.tup
+a photo of ZS
+acc:  85.68646907806396
+Calculated 16 description vectors
+acc:  86.15841269493103
+[85.68646907806396, 86.15841269493103]
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/fgvc_aircraft/shot_16-seed_1.pkl
+FGVCAircraft has 3333 test samples
+loaded image features from cache/image_features.y_truth.FGVCAircraftViT-B-16openai.tup
+a photo of ZS
+acc:  24.992498755455017
+Calculated 16 description vectors
+acc:  26.042604446411133
+[24.992498755455017, 26.042604446411133]
+Reading split from /scratch/cliao25/sun397/split_zhou_SUN397.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/sun397/shot_16-seed_1.pkl
+SUN397 has 19850 test samples
+loaded image features from cache/image_features.y_truth.SUN397ViT-B-16openai.tup
+a photo of ZS
+acc:  63.183873891830444
+Calculated 16 description vectors
+acc:  66.25692248344421
+[63.183873891830444, 66.25692248344421]
+Reading split from /scratch/cliao25/dtd/split_zhou_DescribableTextures.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/dtd/shot_16-seed_1.pkl
+DTD has 1692 test samples
+loaded image features from cache/image_features.y_truth.DTDViT-B-16openai.tup
+a photo of ZS
+acc:  43.557921051979065
+Calculated 16 description vectors
+acc:  44.5035457611084
+[43.557921051979065, 44.5035457611084]
+Reading split from /scratch/cliao25/eurosat/split_zhou_EuroSAT.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/eurosat/shot_16-seed_1.pkl
+EuroSAT has 8100 test samples
+loaded image features from cache/image_features.y_truth.EuroSATViT-B-16openai.tup
+a photo of ZS
+acc:  46.703702211380005
+Calculated 16 description vectors
+acc:  46.45678997039795
+[46.703702211380005, 46.45678997039795]
+Reading split from /scratch/cliao25/ucf101/split_zhou_UCF101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/ucf101/shot_16-seed_1.pkl
+UCF101 has 3783 test samples
+loaded image features from cache/image_features.y_truth.UCF101ViT-B-16openai.tup
+a photo of ZS
+acc:  67.38038063049316
+Calculated 16 description vectors
+acc:  68.22627186775208
+[67.38038063049316, 68.22627186775208]
+ImageNetV2 has 10000 test samples
+loaded image features from cache/image_features.y_truth.ImageNetV2ViT-B-16openai.tup
+a photo of ZS
+acc:  60.96999645233154
+Calculated 16 description vectors
+acc:  62.08999752998352
+[60.96999645233154, 62.08999752998352]
+ImageNetSketch has 50889 test samples
+loaded image features from cache/image_features.y_truth.ImageNetSketchViT-B-16openai.tup
+a photo of ZS
+acc:  46.55819535255432
+Calculated 16 description vectors
+acc:  48.7197607755661
+[46.55819535255432, 48.7197607755661]
+ImageNetA has 7500 test samples
+loaded image features from cache/image_features.y_truth.ImageNetAViT-B-16openai.tup
+a photo of ZS
+acc:  47.24000096321106
+Calculated 16 description vectors
+acc:  50.360000133514404
+[47.24000096321106, 50.360000133514404]
+ImageNetR has 30000 test samples
+loaded image features from cache/image_features.y_truth.ImageNetRViT-B-16openai.tup
+a photo of ZS
+acc:  74.10666942596436
+Calculated 16 description vectors
+acc:  76.48000121116638
+[74.10666942596436, 76.48000121116638]
+Results:
+,ImageNet,Caltech101,OxfordPets,StanfordCars,Flowers102,Food101,FGVCAircraft,SUN397,DTD,EuroSAT,UCF101,ImageNetV2,ImageNetSketch,ImageNetA,ImageNetR,
+ZS,67.10999608039856,93.34685802459717,88.98882269859314,65.37744402885437,70.97036242485046,85.68646907806396,24.992498755455017,63.183873891830444,43.557921051979065,46.703702211380005,67.38038063049316,60.96999645233154,46.55819535255432,47.24000096321106,74.10666942596436,
+soup,68.50999593734741,93.75253319740295,88.7435257434845,65.61373472213745,72.14778661727905,86.15841269493103,26.042604446411133,66.25692248344421,44.5035457611084,46.45678997039795,68.22627186775208,62.08999752998352,48.7197607755661,50.360000133514404,76.48000121116638,
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:499: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:499: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+Namespace(accum_iter=1, adapter=0, adaptive_margin=0.0, bitfit=0, bs=64, cache_dir='/projectnb/textconv/cliao25/data', checkpoint='', d=512, data_dir='/scratch/cliao25', dataset='', descriptor_file='cache/waffle_descriptors_512_count.list', ema=0.995, eval_only=1, gpt_centroid_eval=0, gpt_score_averaging_eval=0, init_lam=0.0, iters_per_epoch=750, label_smoothing=0.0, layer_start_t=9, layer_start_v=9, lora=0, loss='ce', lr=2e-05, lr_decay=0.0, maple=0, margin=0.0, modelname='ViT-B-16', n_descriptors=16, n_epochs=1, openai_eval=0, optimizer='sgd', pretrained='openai', prompt_lr_multi=10.0, prompt_rand_init=0, rand_seed=0, rank=4, resblock_adapter=0, samples_per_class=1, save_model=0, score_averaging=0, seed=3, shallow_prompt_init='a photo of', shots=16, shuffle_descriptors=1, skip_ema_iters=0, soup_eval=1, ssf=0, subsample_classes='all', suffix_string='', teacher_temp=100.0, temp=60.0, text_prompt_depth=1, text_prompt_length=3, token_offset_eval=0, train_text_encoder=1, train_visual_encoder=1, train_with_descriptors=0, use_cached_image_features=0, use_pretrained_image_features=0, visual_prompt_depth=0, visual_prompt_length=3, wd=1e-05, zs_average=0)
+CHOSEN DESCRIPTORS: 
+, which has q10aJ, z6TGD.
+, which has rack button.
+, which has hours musici.
+, which has DAYZF, (o59k.
+, which has cowboy thread.
+, which has ex(QB, Qwn3v.
+, which has temper house.
+, which has nib five-p.
+, which has VnEsA, yjz(n.
+, which has temper inflat.
+, which has nfE84, F3W6M.
+, which has browni nutrit.
+, which has 7cUjQ, FSnhA.
+, which has s5Wfm, J3x:P.
+, which has GgGnU, c:uR1.
+, which has opSJn, yMNGV.
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_3.pkl
+len(dset_base_train):  16000
+number of base classes:  1000
+prompt tuning with prompt length M=3
+shape of text prompt token vectors: torch.Size([3, 512])
+shape of prefix token vectors: torch.Size([1, 512])
+Calculated 16 description vectors
+Runing Evaluation ...
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_1.pkl
+ImageNet has 50000 test samples
+loaded image features from cache/image_features.y_truth.ImageNetViT-B-16openai.tup
+a photo of ZS
+acc:  67.10999608039856
+Calculated 16 description vectors
+acc:  68.09200048446655
+[67.10999608039856, 68.09200048446655]
+Reading split from /scratch/cliao25/caltech-101/split_zhou_Caltech101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/caltech-101/shot_16-seed_1.pkl
+Caltech101 has 2465 test samples
+loaded image features from cache/image_features.y_truth.Caltech101ViT-B-16openai.tup
+a photo of ZS
+acc:  93.34685802459717
+Calculated 16 description vectors
+acc:  93.59026551246643
+[93.34685802459717, 93.59026551246643]
+Reading split from /scratch/cliao25/oxford_pets/split_zhou_OxfordPets.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_pets/shot_16-seed_1.pkl
+OxfordPets has 3669 test samples
+loaded image features from cache/image_features.y_truth.OxfordPetsViT-B-16openai.tup
+a photo of ZS
+acc:  88.98882269859314
+Calculated 16 description vectors
+acc:  88.47097158432007
+[88.98882269859314, 88.47097158432007]
+Reading split from /scratch/cliao25/stanford_cars/split_zhou_StanfordCars.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/stanford_cars/shot_16-seed_1.pkl
+StanfordCars has 8041 test samples
+loaded image features from cache/image_features.y_truth.StanfordCarsViT-B-16openai.tup
+a photo of ZS
+acc:  65.37744402885437
+Calculated 16 description vectors
+acc:  65.51424264907837
+[65.37744402885437, 65.51424264907837]
+Reading split from /scratch/cliao25/oxford_flowers/split_zhou_OxfordFlowers.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_flowers/shot_16-seed_1.pkl
+Flowers102 has 2463 test samples
+loaded image features from cache/image_features.y_truth.Flowers102ViT-B-16openai.tup
+a photo of ZS
+acc:  70.97036242485046
+Calculated 16 description vectors
+acc:  72.02598452568054
+[70.97036242485046, 72.02598452568054]
+Reading split from /scratch/cliao25/food-101/split_zhou_Food101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/food-101/shot_16-seed_1.pkl
+Food101 has 30300 test samples
+loaded image features from cache/image_features.y_truth.Food101ViT-B-16openai.tup
+a photo of ZS
+acc:  85.68646907806396
+Calculated 16 description vectors
+acc:  85.90428829193115
+[85.68646907806396, 85.90428829193115]
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/fgvc_aircraft/shot_16-seed_1.pkl
+FGVCAircraft has 3333 test samples
+loaded image features from cache/image_features.y_truth.FGVCAircraftViT-B-16openai.tup
+a photo of ZS
+acc:  24.992498755455017
+Calculated 16 description vectors
+acc:  26.042604446411133
+[24.992498755455017, 26.042604446411133]
+Reading split from /scratch/cliao25/sun397/split_zhou_SUN397.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/sun397/shot_16-seed_1.pkl
+SUN397 has 19850 test samples
+loaded image features from cache/image_features.y_truth.SUN397ViT-B-16openai.tup
+a photo of ZS
+acc:  63.183873891830444
+Calculated 16 description vectors
+acc:  66.06045365333557
+[63.183873891830444, 66.06045365333557]
+Reading split from /scratch/cliao25/dtd/split_zhou_DescribableTextures.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/dtd/shot_16-seed_1.pkl
+DTD has 1692 test samples
+loaded image features from cache/image_features.y_truth.DTDViT-B-16openai.tup
+a photo of ZS
+acc:  43.557921051979065
+Calculated 16 description vectors
+acc:  43.912529945373535
+[43.557921051979065, 43.912529945373535]
+Reading split from /scratch/cliao25/eurosat/split_zhou_EuroSAT.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/eurosat/shot_16-seed_1.pkl
+EuroSAT has 8100 test samples
+loaded image features from cache/image_features.y_truth.EuroSATViT-B-16openai.tup
+a photo of ZS
+acc:  46.703702211380005
+Calculated 16 description vectors
+acc:  46.790122985839844
+[46.703702211380005, 46.790122985839844]
+Reading split from /scratch/cliao25/ucf101/split_zhou_UCF101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/ucf101/shot_16-seed_1.pkl
+UCF101 has 3783 test samples
+loaded image features from cache/image_features.y_truth.UCF101ViT-B-16openai.tup
+a photo of ZS
+acc:  67.38038063049316
+Calculated 16 description vectors
+acc:  67.9619312286377
+[67.38038063049316, 67.9619312286377]
+ImageNetV2 has 10000 test samples
+loaded image features from cache/image_features.y_truth.ImageNetV2ViT-B-16openai.tup
+a photo of ZS
+acc:  60.96999645233154
+Calculated 16 description vectors
+acc:  61.76999807357788
+[60.96999645233154, 61.76999807357788]
+ImageNetSketch has 50889 test samples
+loaded image features from cache/image_features.y_truth.ImageNetSketchViT-B-16openai.tup
+a photo of ZS
+acc:  46.55819535255432
+Calculated 16 description vectors
+acc:  48.519325256347656
+[46.55819535255432, 48.519325256347656]
+ImageNetA has 7500 test samples
+loaded image features from cache/image_features.y_truth.ImageNetAViT-B-16openai.tup
+a photo of ZS
+acc:  47.24000096321106
+Calculated 16 description vectors
+acc:  49.86666738986969
+[47.24000096321106, 49.86666738986969]
+ImageNetR has 30000 test samples
+loaded image features from cache/image_features.y_truth.ImageNetRViT-B-16openai.tup
+a photo of ZS
+acc:  74.10666942596436
+Calculated 16 description vectors
+acc:  76.25333666801453
+[74.10666942596436, 76.25333666801453]
+Results:
+,ImageNet,Caltech101,OxfordPets,StanfordCars,Flowers102,Food101,FGVCAircraft,SUN397,DTD,EuroSAT,UCF101,ImageNetV2,ImageNetSketch,ImageNetA,ImageNetR,
+ZS,67.10999608039856,93.34685802459717,88.98882269859314,65.37744402885437,70.97036242485046,85.68646907806396,24.992498755455017,63.183873891830444,43.557921051979065,46.703702211380005,67.38038063049316,60.96999645233154,46.55819535255432,47.24000096321106,74.10666942596436,
+soup,68.09200048446655,93.59026551246643,88.47097158432007,65.51424264907837,72.02598452568054,85.90428829193115,26.042604446411133,66.06045365333557,43.912529945373535,46.790122985839844,67.9619312286377,61.76999807357788,48.519325256347656,49.86666738986969,76.25333666801453,

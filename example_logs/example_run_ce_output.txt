@@ -1,0 +1,672 @@
+Namespace(accum_iter=1, adapter=0, adaptive_margin=0.0, bitfit=0, bs=64, cache_dir='/projectnb/textconv/cliao25/data', checkpoint='', d=512, data_dir='/scratch/cliao25', dataset='', descriptor_file='', ema=0.995, eval_only=0, gpt_centroid_eval=0, gpt_score_averaging_eval=0, init_lam=0.0, iters_per_epoch=750, label_smoothing=0.0, layer_start_t=9, layer_start_v=9, lora=0, loss='ce', lr=2e-05, lr_decay=0.0, maple=0, margin=0.0, modelname='ViT-B-16', n_descriptors=-1, n_epochs=1, openai_eval=0, optimizer='sgd', pretrained='openai', prompt_lr_multi=10.0, prompt_rand_init=0, rand_seed=0, rank=4, resblock_adapter=0, samples_per_class=1, save_model=0, score_averaging=0, seed=1, shallow_prompt_init='a photo of', shots=16, shuffle_descriptors=0, skip_ema_iters=0, soup_eval=0, ssf=0, subsample_classes='all', suffix_string='', teacher_temp=100.0, temp=60.0, text_prompt_depth=1, text_prompt_length=3, token_offset_eval=0, train_text_encoder=1, train_visual_encoder=1, train_with_descriptors=0, use_cached_image_features=0, use_pretrained_image_features=0, visual_prompt_depth=0, visual_prompt_length=3, wd=1e-05, zs_average=0)
+CHOSEN WORD SOUP DESCRIPTORS: 
+ here however trend begun acknowledge originally poor known impressive thanks.
+ certainly wiki pretty outputs cu mention named thee suggestion dude.
+ blogs cached usually ment things previous mambo.
+ share indicating mailto exciting von da foto also inexpensive.
+ note considered awesome comparative hh mere http love assumes yours.
+ copyrighted sets filename fotos managed talked ada here wiki continuous.
+ cite volunteer magnificent actually thing zum paxil linked roughly comparison.
+ imposed previously spatial source individually although trademark known.
+CHOSEN DESC SOUP DESCRIPTORS: 
+ which typically brightly colored.
+ which has usually white or off-white.
+ which is a long, low-slung body.
+ which can vary in size from small to large.
+ which has stocky body.
+ which is a large, rectangular body.
+ which is a flat, segmented body.
+ which can be brightly colored or patterned.
+ which is a domain name or URL.
+ which can be made from a variety of materials, including cloth, leather, or nylon.
+ which is a thick, fleshy body.
+ which may be brightly colored or patterned.
+ which has no antennae.
+ which has usually bearskin or shako.
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_1.pkl
+len(dset_base_train):  16000
+number of base classes:  1000
+prompt tuning with prompt length M=3
+shape of text prompt token vectors: torch.Size([3, 512])
+shape of prefix token vectors: torch.Size([1, 512])
+Calculated 0 description vectors
+ optimizer param shapes 
+------------------------
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768, 512])
+torch.Size([768])
+torch.Size([768])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([3, 512])
+------------------------
+There are 2 param groups
+epoch:0 , param_group:0, len: 10, lr:2e-05
+epoch:0 , param_group:1, len: 10, lr:0.0002
+  0%|                                                   | 0/750 [00:00<?, ?it/s]/share/pkg.7/pytorch/1.13.1/install/lib/SCC/../python3.8/site-packages/torch/optim/lr_scheduler.py:138: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+100%|█████████████████████████████████████████| 750/750 [11:12<00:00,  1.11it/s]
+Runing Evaluation ...
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_1.pkl
+ImageNet has 50000 test samples
+100%|███████████████████████████████████████| 1563/1563 [00:58<00:00, 26.71it/s]
+a photo of ZS
+acc:  72.325998544693
+[72.325998544693]
+Reading split from /scratch/cliao25/caltech-101/split_zhou_Caltech101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/caltech-101/shot_16-seed_1.pkl
+Caltech101 has 2465 test samples
+100%|███████████████████████████████████████████| 78/78 [00:03<00:00, 23.04it/s]
+a photo of ZS
+acc:  94.84786987304688
+[94.84786987304688]
+Reading split from /scratch/cliao25/oxford_pets/split_zhou_OxfordPets.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_pets/shot_16-seed_1.pkl
+OxfordPets has 3669 test samples
+100%|█████████████████████████████████████████| 115/115 [00:04<00:00, 24.12it/s]
+a photo of ZS
+acc:  89.9427592754364
+[89.9427592754364]
+Reading split from /scratch/cliao25/stanford_cars/split_zhou_StanfordCars.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/stanford_cars/shot_16-seed_1.pkl
+StanfordCars has 8041 test samples
+100%|█████████████████████████████████████████| 252/252 [00:09<00:00, 25.22it/s]
+a photo of ZS
+acc:  65.00435471534729
+[65.00435471534729]
+Reading split from /scratch/cliao25/oxford_flowers/split_zhou_OxfordFlowers.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_flowers/shot_16-seed_1.pkl
+Flowers102 has 2463 test samples
+100%|███████████████████████████████████████████| 77/77 [00:03<00:00, 22.53it/s]
+a photo of ZS
+acc:  72.59439826011658
+[72.59439826011658]
+Reading split from /scratch/cliao25/food-101/split_zhou_Food101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/food-101/shot_16-seed_1.pkl
+Food101 has 30300 test samples
+100%|█████████████████████████████████████████| 947/947 [00:35<00:00, 26.60it/s]
+a photo of ZS
+acc:  86.38613820075989
+[86.38613820075989]
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/fgvc_aircraft/shot_16-seed_1.pkl
+FGVCAircraft has 3333 test samples
+100%|█████████████████████████████████████████| 105/105 [00:05<00:00, 18.77it/s]
+a photo of ZS
+acc:  25.682568550109863
+[25.682568550109863]
+Reading split from /scratch/cliao25/sun397/split_zhou_SUN397.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/sun397/shot_16-seed_1.pkl
+SUN397 has 19850 test samples
+100%|█████████████████████████████████████████| 621/621 [00:42<00:00, 14.54it/s]
+a photo of ZS
+acc:  68.19143295288086
+[68.19143295288086]
+Reading split from /scratch/cliao25/dtd/split_zhou_DescribableTextures.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/dtd/shot_16-seed_1.pkl
+DTD has 1692 test samples
+100%|███████████████████████████████████████████| 53/53 [00:02<00:00, 21.22it/s]
+a photo of ZS
+acc:  45.626476407051086
+[45.626476407051086]
+Reading split from /scratch/cliao25/eurosat/split_zhou_EuroSAT.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/eurosat/shot_16-seed_1.pkl
+EuroSAT has 8100 test samples
+100%|█████████████████████████████████████████| 254/254 [00:09<00:00, 25.79it/s]
+a photo of ZS
+acc:  50.28395056724548
+[50.28395056724548]
+Reading split from /scratch/cliao25/ucf101/split_zhou_UCF101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/ucf101/shot_16-seed_1.pkl
+UCF101 has 3783 test samples
+100%|█████████████████████████████████████████| 119/119 [00:04<00:00, 24.58it/s]
+a photo of ZS
+acc:  69.54797506332397
+[69.54797506332397]
+ImageNetV2 has 10000 test samples
+100%|█████████████████████████████████████████| 313/313 [00:12<00:00, 25.87it/s]
+a photo of ZS
+acc:  65.23000001907349
+[65.23000001907349]
+ImageNetSketch has 50889 test samples
+100%|███████████████████████████████████████| 1591/1591 [01:04<00:00, 24.70it/s]
+a photo of ZS
+acc:  49.484169483184814
+[49.484169483184814]
+ImageNetA has 7500 test samples
+100%|█████████████████████████████████████████| 235/235 [00:09<00:00, 25.40it/s]
+a photo of ZS
+acc:  49.293333292007446
+[49.293333292007446]
+ImageNetR has 30000 test samples
+100%|█████████████████████████████████████████| 938/938 [00:35<00:00, 26.61it/s]
+a photo of ZS
+acc:  76.80333256721497
+[76.80333256721497]
+Results:
+,ImageNet,Caltech101,OxfordPets,StanfordCars,Flowers102,Food101,FGVCAircraft,SUN397,DTD,EuroSAT,UCF101,ImageNetV2,ImageNetSketch,ImageNetA,ImageNetR,
+ZS,72.325998544693,94.84786987304688,89.9427592754364,65.00435471534729,72.59439826011658,86.38613820075989,25.682568550109863,68.19143295288086,45.626476407051086,50.28395056724548,69.54797506332397,65.23000001907349,49.484169483184814,49.293333292007446,76.80333256721497,
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:499: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:499: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+Namespace(accum_iter=1, adapter=0, adaptive_margin=0.0, bitfit=0, bs=64, cache_dir='/projectnb/textconv/cliao25/data', checkpoint='', d=512, data_dir='/scratch/cliao25', dataset='', descriptor_file='', ema=0.995, eval_only=0, gpt_centroid_eval=0, gpt_score_averaging_eval=0, init_lam=0.0, iters_per_epoch=750, label_smoothing=0.0, layer_start_t=9, layer_start_v=9, lora=0, loss='ce', lr=2e-05, lr_decay=0.0, maple=0, margin=0.0, modelname='ViT-B-16', n_descriptors=-1, n_epochs=1, openai_eval=0, optimizer='sgd', pretrained='openai', prompt_lr_multi=10.0, prompt_rand_init=0, rand_seed=0, rank=4, resblock_adapter=0, samples_per_class=1, save_model=0, score_averaging=0, seed=2, shallow_prompt_init='a photo of', shots=16, shuffle_descriptors=0, skip_ema_iters=0, soup_eval=0, ssf=0, subsample_classes='all', suffix_string='', teacher_temp=100.0, temp=60.0, text_prompt_depth=1, text_prompt_length=3, token_offset_eval=0, train_text_encoder=1, train_visual_encoder=1, train_with_descriptors=0, use_cached_image_features=0, use_pretrained_image_features=0, visual_prompt_depth=0, visual_prompt_length=3, wd=1e-05, zs_average=0)
+CHOSEN WORD SOUP DESCRIPTORS: 
+ newsletter guys considerable webpage favorite portion separately lol.
+ people trembl ee further seem isp whatever existed specifically nice.
+ amend gif faqs namely thee again taken faq ideas seem.
+ unto suggestion misc occasionally fi existed sufficiently how briefly opposite.
+ bizarre like presenting pix side blah urw.
+ bonus accordingly apt size dude asks appeal typically dicke.
+ originally notice differ specifics also began.
+ separately weird individually whatever therefore muze zope initially roughly weblog.
+CHOSEN DESC SOUP DESCRIPTORS: 
+ which is a central focus or object of worship.
+ which has usually white or off-white.
+ which is a curved or rectangular shape.
+ which has usually white or brightly colored.
+ which may have special meaning or symbolism.
+ which typically has a yellow or brownish color.
+ which has large size.
+ which typically has a large, open bed in the back.
+ which has people often in close proximity.
+ which is a short neck.
+ which has usually green or yellow.
+ which typically orange or brown.
+ which has long body.
+ which is a long, horizontal seat.
+ which can be various colors, patterns, and styles.
+ which has small to medium-sized dog.
+ which has black, blue, brindle, fawn, or harlequin coloration.
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_2.pkl
+len(dset_base_train):  16000
+number of base classes:  1000
+prompt tuning with prompt length M=3
+shape of text prompt token vectors: torch.Size([3, 512])
+shape of prefix token vectors: torch.Size([1, 512])
+Calculated 0 description vectors
+ optimizer param shapes 
+------------------------
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768, 512])
+torch.Size([768])
+torch.Size([768])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([3, 512])
+------------------------
+There are 2 param groups
+epoch:0 , param_group:0, len: 10, lr:2e-05
+epoch:0 , param_group:1, len: 10, lr:0.0002
+  0%|                                                   | 0/750 [00:00<?, ?it/s]/share/pkg.7/pytorch/1.13.1/install/lib/SCC/../python3.8/site-packages/torch/optim/lr_scheduler.py:138: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+100%|█████████████████████████████████████████| 750/750 [11:11<00:00,  1.12it/s]
+Runing Evaluation ...
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_1.pkl
+ImageNet has 50000 test samples
+100%|███████████████████████████████████████| 1563/1563 [00:58<00:00, 26.72it/s]
+a photo of ZS
+acc:  72.31799960136414
+[72.31799960136414]
+Reading split from /scratch/cliao25/caltech-101/split_zhou_Caltech101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/caltech-101/shot_16-seed_1.pkl
+Caltech101 has 2465 test samples
+100%|███████████████████████████████████████████| 78/78 [00:03<00:00, 22.86it/s]
+a photo of ZS
+acc:  94.40162181854248
+[94.40162181854248]
+Reading split from /scratch/cliao25/oxford_pets/split_zhou_OxfordPets.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_pets/shot_16-seed_1.pkl
+OxfordPets has 3669 test samples
+100%|█████████████████████████████████████████| 115/115 [00:04<00:00, 23.98it/s]
+a photo of ZS
+acc:  90.16080498695374
+[90.16080498695374]
+Reading split from /scratch/cliao25/stanford_cars/split_zhou_StanfordCars.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/stanford_cars/shot_16-seed_1.pkl
+StanfordCars has 8041 test samples
+100%|█████████████████████████████████████████| 252/252 [00:10<00:00, 25.13it/s]
+a photo of ZS
+acc:  65.06653428077698
+[65.06653428077698]
+Reading split from /scratch/cliao25/oxford_flowers/split_zhou_OxfordFlowers.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_flowers/shot_16-seed_1.pkl
+Flowers102 has 2463 test samples
+100%|███████████████████████████████████████████| 77/77 [00:03<00:00, 22.35it/s]
+a photo of ZS
+acc:  72.55379557609558
+[72.55379557609558]
+Reading split from /scratch/cliao25/food-101/split_zhou_Food101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/food-101/shot_16-seed_1.pkl
+Food101 has 30300 test samples
+100%|█████████████████████████████████████████| 947/947 [00:35<00:00, 26.59it/s]
+a photo of ZS
+acc:  86.31682991981506
+[86.31682991981506]
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/fgvc_aircraft/shot_16-seed_1.pkl
+FGVCAircraft has 3333 test samples
+100%|█████████████████████████████████████████| 105/105 [00:05<00:00, 18.80it/s]
+a photo of ZS
+acc:  25.832581520080566
+[25.832581520080566]
+Reading split from /scratch/cliao25/sun397/split_zhou_SUN397.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/sun397/shot_16-seed_1.pkl
+SUN397 has 19850 test samples
+100%|█████████████████████████████████████████| 621/621 [00:42<00:00, 14.60it/s]
+a photo of ZS
+acc:  67.93954372406006
+[67.93954372406006]
+Reading split from /scratch/cliao25/dtd/split_zhou_DescribableTextures.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/dtd/shot_16-seed_1.pkl
+DTD has 1692 test samples
+100%|███████████████████████████████████████████| 53/53 [00:02<00:00, 21.12it/s]
+a photo of ZS
+acc:  45.271867513656616
+[45.271867513656616]
+Reading split from /scratch/cliao25/eurosat/split_zhou_EuroSAT.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/eurosat/shot_16-seed_1.pkl
+EuroSAT has 8100 test samples
+100%|█████████████████████████████████████████| 254/254 [00:09<00:00, 25.81it/s]
+a photo of ZS
+acc:  51.2592613697052
+[51.2592613697052]
+Reading split from /scratch/cliao25/ucf101/split_zhou_UCF101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/ucf101/shot_16-seed_1.pkl
+UCF101 has 3783 test samples
+100%|█████████████████████████████████████████| 119/119 [00:04<00:00, 24.45it/s]
+a photo of ZS
+acc:  69.62727904319763
+[69.62727904319763]
+ImageNetV2 has 10000 test samples
+100%|█████████████████████████████████████████| 313/313 [00:12<00:00, 25.77it/s]
+a photo of ZS
+acc:  65.32999873161316
+[65.32999873161316]
+ImageNetSketch has 50889 test samples
+100%|███████████████████████████████████████| 1591/1591 [01:04<00:00, 24.55it/s]
+a photo of ZS
+acc:  49.40360188484192
+[49.40360188484192]
+ImageNetA has 7500 test samples
+100%|█████████████████████████████████████████| 235/235 [00:09<00:00, 25.38it/s]
+a photo of ZS
+acc:  50.013333559036255
+[50.013333559036255]
+ImageNetR has 30000 test samples
+100%|█████████████████████████████████████████| 938/938 [00:35<00:00, 26.58it/s]
+a photo of ZS
+acc:  76.8666684627533
+[76.8666684627533]
+Results:
+,ImageNet,Caltech101,OxfordPets,StanfordCars,Flowers102,Food101,FGVCAircraft,SUN397,DTD,EuroSAT,UCF101,ImageNetV2,ImageNetSketch,ImageNetA,ImageNetR,
+ZS,72.31799960136414,94.40162181854248,90.16080498695374,65.06653428077698,72.55379557609558,86.31682991981506,25.832581520080566,67.93954372406006,45.271867513656616,51.2592613697052,69.62727904319763,65.32999873161316,49.40360188484192,50.013333559036255,76.8666684627533,
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:499: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:499: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/usr4/alg504/cliao25/.local/lib/python3.8/site-packages/numpy/core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+Namespace(accum_iter=1, adapter=0, adaptive_margin=0.0, bitfit=0, bs=64, cache_dir='/projectnb/textconv/cliao25/data', checkpoint='', d=512, data_dir='/scratch/cliao25', dataset='', descriptor_file='', ema=0.995, eval_only=0, gpt_centroid_eval=0, gpt_score_averaging_eval=0, init_lam=0.0, iters_per_epoch=750, label_smoothing=0.0, layer_start_t=9, layer_start_v=9, lora=0, loss='ce', lr=2e-05, lr_decay=0.0, maple=0, margin=0.0, modelname='ViT-B-16', n_descriptors=-1, n_epochs=1, openai_eval=0, optimizer='sgd', pretrained='openai', prompt_lr_multi=10.0, prompt_rand_init=0, rand_seed=0, rank=4, resblock_adapter=0, samples_per_class=1, save_model=0, score_averaging=0, seed=3, shallow_prompt_init='a photo of', shots=16, shuffle_descriptors=0, skip_ema_iters=0, soup_eval=0, ssf=0, subsample_classes='all', suffix_string='', teacher_temp=100.0, temp=60.0, text_prompt_depth=1, text_prompt_length=3, token_offset_eval=0, train_text_encoder=1, train_visual_encoder=1, train_with_descriptors=0, use_cached_image_features=0, use_pretrained_image_features=0, visual_prompt_depth=0, visual_prompt_length=3, wd=1e-05, zs_average=0)
+CHOSEN WORD SOUP DESCRIPTORS: 
+ enrolled inexpensive appearance involved weblog viewed though picture name information.
+ named provision von offered ours compare ment wonder random yourself.
+ info example wikipedia contact moreover named vary originally kenneth.
+ manner enlarge initially also properly herein picture.
+ appearance silly similar webpage particular weblog familiar.
+ muze differ exists weird specially referring ours here weblog persons.
+ trademarks similarly likewise jesse prerequisite nevertheless anyone foto zum.
+ ata compare last dear previously increasingly.
+CHOSEN DESC SOUP DESCRIPTORS: 
+ which can also be used for pleasure trips or as a tourist attraction.
+ which can vary in size from small to large.
+ which has people often in close proximity.
+ which may have pictures or not.
+ which can be indoors or outdoors.
+ which may have a symbolic meaning.
+ which has dark brown or black in coloration.
+ which typically used for sleeping or resting.
+ which may have decorative elements such as lights or flags.
+ which has web content.
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_3.pkl
+len(dset_base_train):  16000
+number of base classes:  1000
+prompt tuning with prompt length M=3
+shape of text prompt token vectors: torch.Size([3, 512])
+shape of prefix token vectors: torch.Size([1, 512])
+Calculated 0 description vectors
+ optimizer param shapes 
+------------------------
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768, 512])
+torch.Size([768])
+torch.Size([768])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([3, 512])
+------------------------
+There are 2 param groups
+epoch:0 , param_group:0, len: 10, lr:2e-05
+epoch:0 , param_group:1, len: 10, lr:0.0002
+  0%|                                                   | 0/750 [00:00<?, ?it/s]/share/pkg.7/pytorch/1.13.1/install/lib/SCC/../python3.8/site-packages/torch/optim/lr_scheduler.py:138: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+100%|█████████████████████████████████████████| 750/750 [11:11<00:00,  1.12it/s]
+Runing Evaluation ...
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_1.pkl
+ImageNet has 50000 test samples
+100%|███████████████████████████████████████| 1563/1563 [00:58<00:00, 26.70it/s]
+a photo of ZS
+acc:  72.37799763679504
+[72.37799763679504]
+Reading split from /scratch/cliao25/caltech-101/split_zhou_Caltech101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/caltech-101/shot_16-seed_1.pkl
+Caltech101 has 2465 test samples
+100%|███████████████████████████████████████████| 78/78 [00:03<00:00, 22.83it/s]
+a photo of ZS
+acc:  94.72616910934448
+[94.72616910934448]
+Reading split from /scratch/cliao25/oxford_pets/split_zhou_OxfordPets.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_pets/shot_16-seed_1.pkl
+OxfordPets has 3669 test samples
+100%|█████████████████████████████████████████| 115/115 [00:04<00:00, 24.01it/s]
+a photo of ZS
+acc:  89.58843946456909
+[89.58843946456909]
+Reading split from /scratch/cliao25/stanford_cars/split_zhou_StanfordCars.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/stanford_cars/shot_16-seed_1.pkl
+StanfordCars has 8041 test samples
+100%|█████████████████████████████████████████| 252/252 [00:10<00:00, 25.08it/s]
+a photo of ZS
+acc:  65.41475057601929
+[65.41475057601929]
+Reading split from /scratch/cliao25/oxford_flowers/split_zhou_OxfordFlowers.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_flowers/shot_16-seed_1.pkl
+Flowers102 has 2463 test samples
+100%|███████████████████████████████████████████| 77/77 [00:03<00:00, 22.39it/s]
+a photo of ZS
+acc:  72.10718989372253
+[72.10718989372253]
+Reading split from /scratch/cliao25/food-101/split_zhou_Food101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/food-101/shot_16-seed_1.pkl
+Food101 has 30300 test samples
+100%|█████████████████████████████████████████| 947/947 [00:35<00:00, 26.54it/s]
+a photo of ZS
+acc:  86.1155092716217
+[86.1155092716217]
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/fgvc_aircraft/shot_16-seed_1.pkl
+FGVCAircraft has 3333 test samples
+100%|█████████████████████████████████████████| 105/105 [00:05<00:00, 18.48it/s]
+a photo of ZS
+acc:  25.082507729530334
+[25.082507729530334]
+Reading split from /scratch/cliao25/sun397/split_zhou_SUN397.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/sun397/shot_16-seed_1.pkl
+SUN397 has 19850 test samples
+100%|█████████████████████████████████████████| 621/621 [00:42<00:00, 14.68it/s]
+a photo of ZS
+acc:  68.06548833847046
+[68.06548833847046]
+Reading split from /scratch/cliao25/dtd/split_zhou_DescribableTextures.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/dtd/shot_16-seed_1.pkl
+DTD has 1692 test samples
+100%|███████████████████████████████████████████| 53/53 [00:02<00:00, 21.10it/s]
+a photo of ZS
+acc:  46.15839123725891
+[46.15839123725891]
+Reading split from /scratch/cliao25/eurosat/split_zhou_EuroSAT.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/eurosat/shot_16-seed_1.pkl
+EuroSAT has 8100 test samples
+100%|█████████████████████████████████████████| 254/254 [00:09<00:00, 25.89it/s]
+a photo of ZS
+acc:  49.23456907272339
+[49.23456907272339]
+Reading split from /scratch/cliao25/ucf101/split_zhou_UCF101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/ucf101/shot_16-seed_1.pkl
+UCF101 has 3783 test samples
+100%|█████████████████████████████████████████| 119/119 [00:04<00:00, 24.61it/s]
+a photo of ZS
+acc:  69.31006908416748
+[69.31006908416748]
+ImageNetV2 has 10000 test samples
+100%|█████████████████████████████████████████| 313/313 [00:12<00:00, 25.77it/s]
+a photo of ZS
+acc:  65.41000008583069
+[65.41000008583069]
+ImageNetSketch has 50889 test samples
+100%|███████████████████████████████████████| 1591/1591 [01:04<00:00, 24.68it/s]
+a photo of ZS
+acc:  49.3308961391449
+[49.3308961391449]
+ImageNetA has 7500 test samples
+100%|█████████████████████████████████████████| 235/235 [00:09<00:00, 25.34it/s]
+a photo of ZS
+acc:  50.253331661224365
+[50.253331661224365]
+ImageNetR has 30000 test samples
+100%|█████████████████████████████████████████| 938/938 [00:35<00:00, 26.54it/s]
+a photo of ZS
+acc:  77.31000185012817
+[77.31000185012817]
+Results:
+,ImageNet,Caltech101,OxfordPets,StanfordCars,Flowers102,Food101,FGVCAircraft,SUN397,DTD,EuroSAT,UCF101,ImageNetV2,ImageNetSketch,ImageNetA,ImageNetR,
+ZS,72.37799763679504,94.72616910934448,89.58843946456909,65.41475057601929,72.10718989372253,86.1155092716217,25.082507729530334,68.06548833847046,46.15839123725891,49.23456907272339,69.31006908416748,65.41000008583069,49.3308961391449,50.253331661224365,77.31000185012817,

@@ -1,0 +1,107 @@
+Namespace(accum_iter=1, adapter=0, adaptive_margin=0.0, always_select_best=0, bitfit=0, bs=64, cache_dir='/projectnb/textconv/cliao25/data', checkpoint='', d=512, data_dir='/scratch/cliao25', dataset='ImageNet', ema=0.995, eval_only=0, init_lam=0.0, iters_per_epoch=750, k0=250, k1=1000, label_smoothing=0.0, layer_start_t=9, layer_start_v=9, lora=0, loss='ce', lr=2e-05, lr_decay=0.0, maple=0, margin=0.0, max_word_length=10, modelname='ViT-B-16', n_descriptors=8, n_epochs=1, optimizer='sgd', patience=250, pretrained='openai', prompt_lr_multi=10.0, prompt_rand_init=0, rank=4, resblock_adapter=0, samples_per_class=1, save_model=0, seed=3, shallow_prompt_init='a photo of', shots=16, skip_ema_iters=0, ssf=0, subsample_classes='all', suffix_string='', teacher_temp=100.0, temp=60.0, text_prompt_depth=1, text_prompt_length=3, train_text_encoder=1, train_visual_encoder=1, train_with_descriptors=0, visual_prompt_depth=0, visual_prompt_length=3, wd=1e-05)
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_3.pkl
+len(dset_base_train):  16000
+number of base classes:  1000
+prompt tuning with prompt length M=3
+shape of text prompt token vectors: torch.Size([3, 512])
+shape of prefix token vectors: torch.Size([1, 512])
+100%|█████████████████████████████████████████| 250/250 [00:20<00:00, 11.92it/s]
+loading features from cache/word_features__ViT-B-16_openai.tensor.
+word_features.shape:  torch.Size([9894, 1000, 512])
+calculating individual accuracies of words
+100%|██████████████████████████████████████| 9894/9894 [00:12<00:00, 789.89it/s]
+max individual word acc:  70.12500166893005
+best word: 
+initially
+first_word:  enrolled
+  0%|                                                   | 0/251 [00:00<?, ?it/s]acc now 69.51250433921814, example: a photo of a tench, enrolled
+  1%|▎                                          | 2/251 [00:00<01:11,  3.46it/s]acc now 69.76250410079956, example: a photo of a tench, enrolled inexpensive
+  4%|█▌                                         | 9/251 [00:02<01:10,  3.43it/s]acc now 69.80000138282776, example: a photo of a tench, enrolled inexpensive appearance
+ 11%|████▋                                     | 28/251 [00:08<01:05,  3.38it/s]acc now 69.92500424385071, example: a photo of a tench, enrolled inexpensive appearance involved
+ 20%|████████▎                                 | 50/251 [00:14<00:59,  3.35it/s]acc now 70.15625238418579, example: a photo of a tench, enrolled inexpensive appearance involved weblog
+ 34%|██████████████▏                           | 85/251 [00:25<00:50,  3.32it/s]acc now 70.16250491142273, example: a photo of a tench, enrolled inexpensive appearance involved weblog viewed
+ 45%|██████████████████▍                      | 113/251 [00:33<00:41,  3.29it/s]acc now 70.22500038146973, example: a photo of a tench, enrolled inexpensive appearance involved weblog viewed though
+ 46%|██████████████████▉                      | 116/251 [00:34<00:41,  3.27it/s]acc now 70.2875018119812, example: a photo of a tench, enrolled inexpensive appearance involved weblog viewed though picture
+ 57%|███████████████████████▏                 | 142/251 [00:42<00:33,  3.23it/s]acc now 70.33125162124634, example: a photo of a tench, enrolled inexpensive appearance involved weblog viewed though picture name
+ 73%|█████████████████████████████▉           | 183/251 [00:55<00:21,  3.21it/s]acc now 70.41250467300415, example: a photo of a tench, enrolled inexpensive appearance involved weblog viewed though picture name information
+ 73%|█████████████████████████████▉           | 183/251 [00:55<00:20,  3.27it/s]
+Final word chain acc: 70.41250467300415
+first_word:  named
+  0%|                                                   | 0/251 [00:00<?, ?it/s]acc now 69.45000290870667, example: a photo of a tench, named
+  0%|▏                                          | 1/251 [00:00<01:11,  3.51it/s]acc now 69.7812557220459, example: a photo of a tench, named provision
+ 11%|████▌                                     | 27/251 [00:07<01:05,  3.43it/s]acc now 69.99375224113464, example: a photo of a tench, named provision von
+ 12%|█████                                     | 30/251 [00:08<01:04,  3.42it/s]acc now 70.03750205039978, example: a photo of a tench, named provision von offered
+ 18%|███████▎                                  | 44/251 [00:12<01:01,  3.37it/s]acc now 70.11250257492065, example: a photo of a tench, named provision von offered ours
+ 18%|███████▌                                  | 45/251 [00:13<01:01,  3.37it/s]acc now 70.36875486373901, example: a photo of a tench, named provision von offered ours compare
+ 28%|███████████▉                              | 71/251 [00:21<00:54,  3.31it/s]acc now 70.38125395774841, example: a photo of a tench, named provision von offered ours compare ment
+ 33%|█████████████▋                            | 82/251 [00:24<00:51,  3.29it/s]acc now 70.39375305175781, example: a photo of a tench, named provision von offered ours compare ment wonder
+ 36%|███████████████                           | 90/251 [00:26<00:49,  3.26it/s]acc now 70.41250467300415, example: a photo of a tench, named provision von offered ours compare ment wonder random
+ 63%|█████████████████████████▉               | 159/251 [00:48<00:28,  3.23it/s]acc now 70.44375538825989, example: a photo of a tench, named provision von offered ours compare ment wonder random yourself
+ 63%|█████████████████████████▉               | 159/251 [00:48<00:28,  3.28it/s]
+Final word chain acc: 70.44375538825989
+first_word:  info
+  0%|                                                   | 0/251 [00:00<?, ?it/s]acc now 69.54375505447388, example: a photo of a tench, info
+  0%|▏                                          | 1/251 [00:00<01:11,  3.51it/s]acc now 69.80000138282776, example: a photo of a tench, info example
+  2%|█                                          | 6/251 [00:01<01:11,  3.44it/s]acc now 70.09375095367432, example: a photo of a tench, info example wikipedia
+  3%|█▎                                         | 8/251 [00:02<01:10,  3.42it/s]acc now 70.13125419616699, example: a photo of a tench, info example wikipedia contact
+  5%|██▏                                       | 13/251 [00:03<01:10,  3.38it/s]acc now 70.2750027179718, example: a photo of a tench, info example wikipedia contact moreover
+ 10%|████                                      | 24/251 [00:07<01:08,  3.33it/s]acc now 70.40000557899475, example: a photo of a tench, info example wikipedia contact moreover named
+ 10%|████▏                                     | 25/251 [00:07<01:07,  3.33it/s]acc now 70.40625214576721, example: a photo of a tench, info example wikipedia contact moreover named vary
+ 27%|███████████▏                              | 67/251 [00:20<00:56,  3.27it/s]acc now 70.45625448226929, example: a photo of a tench, info example wikipedia contact moreover named vary originally
+ 29%|████████████                              | 72/251 [00:21<00:55,  3.24it/s]acc now 70.55625319480896, example: a photo of a tench, info example wikipedia contact moreover named vary originally kenneth
+100%|█████████████████████████████████████████| 251/251 [01:17<00:00,  3.24it/s]
+Final word chain acc: 70.55625319480896
+first_word:  manner
+  0%|                                                   | 0/251 [00:00<?, ?it/s]acc now 69.86250281333923, example: a photo of a tench, manner
+ 43%|█████████████████▍                       | 107/251 [00:30<00:41,  3.47it/s]acc now 70.12500166893005, example: a photo of a tench, manner enlarge
+ 47%|███████████████████▎                     | 118/251 [00:34<00:38,  3.44it/s]acc now 70.15625238418579, example: a photo of a tench, manner enlarge initially
+ 49%|████████████████████                     | 123/251 [00:35<00:37,  3.40it/s]acc now 70.18125057220459, example: a photo of a tench, manner enlarge initially also
+ 68%|███████████████████████████▊             | 170/251 [00:49<00:24,  3.36it/s]acc now 70.19375562667847, example: a photo of a tench, manner enlarge initially also properly
+ 84%|██████████████████████████████████▋      | 212/251 [01:02<00:11,  3.33it/s]acc now 70.25625109672546, example: a photo of a tench, manner enlarge initially also properly herein
+ 98%|████████████████████████████████████████▎| 247/251 [01:12<00:01,  3.30it/s]acc now 70.31250596046448, example: a photo of a tench, manner enlarge initially also properly herein picture
+100%|█████████████████████████████████████████| 251/251 [01:13<00:00,  3.40it/s]
+Final word chain acc: 70.31250596046448
+first_word:  appearance
+  0%|                                                   | 0/251 [00:00<?, ?it/s]acc now 69.66875195503235, example: a photo of a tench, appearance
+  1%|▌                                          | 3/251 [00:00<01:11,  3.48it/s]acc now 69.67500448226929, example: a photo of a tench, appearance silly
+ 11%|████▋                                     | 28/251 [00:08<01:04,  3.43it/s]acc now 69.93125081062317, example: a photo of a tench, appearance silly similar
+ 13%|█████▎                                    | 32/251 [00:09<01:04,  3.41it/s]acc now 70.11875510215759, example: a photo of a tench, appearance silly similar webpage
+ 14%|█████▋                                    | 34/251 [00:09<01:04,  3.39it/s]acc now 70.13750076293945, example: a photo of a tench, appearance silly similar webpage particular
+ 20%|████████▎                                 | 50/251 [00:14<01:00,  3.33it/s]acc now 70.35625576972961, example: a photo of a tench, appearance silly similar webpage particular weblog
+ 28%|███████████▉                              | 71/251 [00:21<00:54,  3.29it/s]acc now 70.38750052452087, example: a photo of a tench, appearance silly similar webpage particular weblog familiar
+100%|█████████████████████████████████████████| 251/251 [01:16<00:00,  3.29it/s]
+Final word chain acc: 70.38750052452087
+first_word:  muze
+  0%|                                                   | 0/251 [00:00<?, ?it/s]acc now 69.5062518119812, example: a photo of a tench, muze
+  1%|▌                                          | 3/251 [00:00<01:11,  3.47it/s]acc now 69.8437511920929, example: a photo of a tench, muze differ
+ 12%|████▊                                     | 29/251 [00:08<01:04,  3.42it/s]acc now 69.94375586509705, example: a photo of a tench, muze differ exists
+ 12%|█████                                     | 30/251 [00:08<01:04,  3.43it/s]acc now 69.98750567436218, example: a photo of a tench, muze differ exists weird
+ 15%|██████▏                                   | 37/251 [00:10<01:03,  3.37it/s]acc now 70.06875276565552, example: a photo of a tench, muze differ exists weird specially
+ 15%|██████▎                                   | 38/251 [00:11<01:03,  3.36it/s]acc now 70.08750438690186, example: a photo of a tench, muze differ exists weird specially referring
+ 17%|███████▏                                  | 43/251 [00:12<01:03,  3.29it/s]acc now 70.45625448226929, example: a photo of a tench, muze differ exists weird specially referring ours
+ 20%|████████▎                                 | 50/251 [00:14<01:01,  3.27it/s]acc now 70.53750157356262, example: a photo of a tench, muze differ exists weird specially referring ours here
+ 21%|████████▊                                 | 53/251 [00:15<01:00,  3.26it/s]acc now 70.78750133514404, example: a photo of a tench, muze differ exists weird specially referring ours here weblog
+ 26%|███████████                               | 66/251 [00:19<00:57,  3.22it/s]acc now 70.90000510215759, example: a photo of a tench, muze differ exists weird specially referring ours here weblog persons
+ 26%|███████████                               | 66/251 [00:20<00:56,  3.29it/s]
+Final word chain acc: 70.90000510215759
+first_word:  trademarks
+  0%|                                                   | 0/251 [00:00<?, ?it/s]acc now 69.37500238418579, example: a photo of a tench, trademarks
+  2%|▊                                          | 5/251 [00:01<01:11,  3.46it/s]acc now 69.71250176429749, example: a photo of a tench, trademarks similarly
+  3%|█▏                                         | 7/251 [00:02<01:10,  3.44it/s]acc now 69.81250047683716, example: a photo of a tench, trademarks similarly likewise
+  3%|█▎                                         | 8/251 [00:02<01:10,  3.43it/s]acc now 70.09375095367432, example: a photo of a tench, trademarks similarly likewise jesse
+  4%|█▊                                        | 11/251 [00:03<01:10,  3.38it/s]acc now 70.16875147819519, example: a photo of a tench, trademarks similarly likewise jesse prerequisite
+ 15%|██████▎                                   | 38/251 [00:11<01:04,  3.31it/s]acc now 70.17500400543213, example: a photo of a tench, trademarks similarly likewise jesse prerequisite nevertheless
+ 18%|███████▋                                  | 46/251 [00:13<01:02,  3.27it/s]acc now 70.2625036239624, example: a photo of a tench, trademarks similarly likewise jesse prerequisite nevertheless anyone
+ 21%|████████▊                                 | 53/251 [00:15<01:00,  3.25it/s]acc now 70.2875018119812, example: a photo of a tench, trademarks similarly likewise jesse prerequisite nevertheless anyone foto
+ 22%|█████████▏                                | 55/251 [00:16<01:00,  3.24it/s]acc now 70.47500610351562, example: a photo of a tench, trademarks similarly likewise jesse prerequisite nevertheless anyone foto zum
+100%|█████████████████████████████████████████| 251/251 [01:17<00:00,  3.22it/s]
+Final word chain acc: 70.47500610351562
+first_word:  ata
+  0%|                                                   | 0/251 [00:00<?, ?it/s]acc now 69.48750615119934, example: a photo of a tench, ata
+  2%|▊                                          | 5/251 [00:01<01:10,  3.48it/s]acc now 69.62500214576721, example: a photo of a tench, ata compare
+  7%|██▊                                       | 17/251 [00:04<01:07,  3.44it/s]acc now 69.72500085830688, example: a photo of a tench, ata compare last
+  8%|███▌                                      | 21/251 [00:06<01:07,  3.42it/s]acc now 69.90625262260437, example: a photo of a tench, ata compare last dear
+ 14%|██████                                    | 36/251 [00:10<01:03,  3.38it/s]acc now 70.10000348091125, example: a photo of a tench, ata compare last dear previously
+ 24%|██████████                                | 60/251 [00:17<00:57,  3.34it/s]acc now 70.12500166893005, example: a photo of a tench, ata compare last dear previously increasingly
+100%|█████████████████████████████████████████| 251/251 [01:15<00:00,  3.32it/s]
+Final word chain acc: 70.12500166893005

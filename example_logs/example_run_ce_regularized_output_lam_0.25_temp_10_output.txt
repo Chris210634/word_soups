@@ -1,0 +1,929 @@
+Namespace(accum_iter=1, adapter=0, adaptive_margin=0.0, bitfit=0, bs=64, cache_dir='/projectnb/textconv/cliao25/data', checkpoint='', d=512, data_dir='/scratch/cliao25', dataset='', descriptor_file='', ema=0.995, eval_only=0, gpt_centroid_eval=0, gpt_score_averaging_eval=0, init_lam=0.25, iters_per_epoch=750, label_smoothing=0.0, layer_start_t=9, layer_start_v=9, lora=0, loss='ce', lr=2e-05, lr_decay=0.0, maple=0, margin=0.0, modelname='ViT-B-16', n_descriptors=-1, n_epochs=1, openai_eval=0, optimizer='sgd', pretrained='openai', prompt_lr_multi=10.0, prompt_rand_init=0, rand_seed=0, rank=4, resblock_adapter=0, samples_per_class=1, save_model=0, score_averaging=1, seed=1, shallow_prompt_init='a photo of', shots=16, shuffle_descriptors=0, skip_ema_iters=0, soup_eval=1, ssf=0, subsample_classes='all', suffix_string='', teacher_temp=10.0, temp=60.0, text_prompt_depth=1, text_prompt_length=3, token_offset_eval=0, train_text_encoder=1, train_visual_encoder=1, train_with_descriptors=1, use_cached_image_features=0, use_pretrained_image_features=0, visual_prompt_depth=0, visual_prompt_length=3, wd=1e-05, zs_average=0)
+CHOSEN WORD SOUP DESCRIPTORS: 
+ here however trend begun acknowledge originally poor known impressive thanks.
+ certainly wiki pretty outputs cu mention named thee suggestion dude.
+ blogs cached usually ment things previous mambo.
+ share indicating mailto exciting von da foto also inexpensive.
+ note considered awesome comparative hh mere http love assumes yours.
+ copyrighted sets filename fotos managed talked ada here wiki continuous.
+ cite volunteer magnificent actually thing zum paxil linked roughly comparison.
+ imposed previously spatial source individually although trademark known.
+CHOSEN DESC SOUP DESCRIPTORS: 
+ which typically brightly colored.
+ which has usually white or off-white.
+ which is a long, low-slung body.
+ which can vary in size from small to large.
+ which has stocky body.
+ which is a large, rectangular body.
+ which is a flat, segmented body.
+ which can be brightly colored or patterned.
+ which is a domain name or URL.
+ which can be made from a variety of materials, including cloth, leather, or nylon.
+ which is a thick, fleshy body.
+ which may be brightly colored or patterned.
+ which has no antennae.
+ which has usually bearskin or shako.
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_1.pkl
+len(dset_base_train):  16000
+number of base classes:  1000
+prompt tuning with prompt length M=3
+shape of text prompt token vectors: torch.Size([3, 512])
+shape of prefix token vectors: torch.Size([1, 512])
+Calculated 0 description vectors
+ optimizer param shapes 
+------------------------
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768, 512])
+torch.Size([768])
+torch.Size([768])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([3, 512])
+------------------------
+tokenized_text_with_descriptors.shape:  torch.Size([8, 1000, 77])
+There are 2 param groups
+epoch:0 , param_group:0, len: 10, lr:2e-05
+epoch:0 , param_group:1, len: 10, lr:0.0002
+Runing Evaluation ...
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_1.pkl
+ImageNet has 50000 test samples
+a photo of ZS
+acc:  71.31999731063843
+Calculated 8 description vectors
+acc:  71.67800068855286
+Calculated 14 description vectors
+acc:  71.6439962387085
+Calculated 8 description vectors
+ +++ score averaging
+acc:  71.66399955749512
+[71.31999731063843, 71.67800068855286, 71.6439962387085, 71.66399955749512]
+Reading split from /scratch/cliao25/caltech-101/split_zhou_Caltech101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/caltech-101/shot_16-seed_1.pkl
+Caltech101 has 2465 test samples
+a photo of ZS
+acc:  94.48276162147522
+Calculated 8 description vectors
+acc:  94.44218873977661
+Calculated 14 description vectors
+acc:  94.40162181854248
+Calculated 8 description vectors
+ +++ score averaging
+acc:  94.27992105484009
+[94.48276162147522, 94.44218873977661, 94.40162181854248, 94.27992105484009]
+Reading split from /scratch/cliao25/oxford_pets/split_zhou_OxfordPets.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_pets/shot_16-seed_1.pkl
+OxfordPets has 3669 test samples
+a photo of ZS
+acc:  90.95121026039124
+Calculated 8 description vectors
+acc:  90.46061635017395
+Calculated 14 description vectors
+acc:  91.03297591209412
+Calculated 8 description vectors
+ +++ score averaging
+acc:  90.37884473800659
+[90.95121026039124, 90.46061635017395, 91.03297591209412, 90.37884473800659]
+Reading split from /scratch/cliao25/stanford_cars/split_zhou_StanfordCars.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/stanford_cars/shot_16-seed_1.pkl
+StanfordCars has 8041 test samples
+a photo of ZS
+acc:  64.96704816818237
+Calculated 8 description vectors
+acc:  64.74319100379944
+Calculated 14 description vectors
+acc:  65.00435471534729
+Calculated 8 description vectors
+ +++ score averaging
+acc:  64.8053765296936
+[64.96704816818237, 64.74319100379944, 65.00435471534729, 64.8053765296936]
+Reading split from /scratch/cliao25/oxford_flowers/split_zhou_OxfordFlowers.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_flowers/shot_16-seed_1.pkl
+Flowers102 has 2463 test samples
+a photo of ZS
+acc:  71.94478511810303
+Calculated 8 description vectors
+acc:  72.47259616851807
+Calculated 14 description vectors
+acc:  72.55379557609558
+Calculated 8 description vectors
+ +++ score averaging
+acc:  71.86357975006104
+[71.94478511810303, 72.47259616851807, 72.55379557609558, 71.86357975006104]
+Reading split from /scratch/cliao25/food-101/split_zhou_Food101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/food-101/shot_16-seed_1.pkl
+Food101 has 30300 test samples
+a photo of ZS
+acc:  86.10560894012451
+Calculated 8 description vectors
+acc:  86.14851236343384
+Calculated 14 description vectors
+acc:  86.32013201713562
+Calculated 8 description vectors
+ +++ score averaging
+acc:  86.16831302642822
+[86.10560894012451, 86.14851236343384, 86.32013201713562, 86.16831302642822]
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/fgvc_aircraft/shot_16-seed_1.pkl
+FGVCAircraft has 3333 test samples
+a photo of ZS
+acc:  25.112509727478027
+Calculated 8 description vectors
+acc:  25.082507729530334
+Calculated 14 description vectors
+acc:  25.442543625831604
+Calculated 8 description vectors
+ +++ score averaging
+acc:  25.442543625831604
+[25.112509727478027, 25.082507729530334, 25.442543625831604, 25.442543625831604]
+Reading split from /scratch/cliao25/sun397/split_zhou_SUN397.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/sun397/shot_16-seed_1.pkl
+SUN397 has 19850 test samples
+a photo of ZS
+acc:  67.4458384513855
+Calculated 8 description vectors
+acc:  68.0453360080719
+Calculated 14 description vectors
+acc:  67.96976923942566
+Calculated 8 description vectors
+ +++ score averaging
+acc:  67.89923906326294
+[67.4458384513855, 68.0453360080719, 67.96976923942566, 67.89923906326294]
+Reading split from /scratch/cliao25/dtd/split_zhou_DescribableTextures.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/dtd/shot_16-seed_1.pkl
+DTD has 1692 test samples
+a photo of ZS
+acc:  45.03546059131622
+Calculated 8 description vectors
+acc:  44.917258620262146
+Calculated 14 description vectors
+acc:  45.330968499183655
+Calculated 8 description vectors
+ +++ score averaging
+acc:  45.271867513656616
+[45.03546059131622, 44.917258620262146, 45.330968499183655, 45.271867513656616]
+Reading split from /scratch/cliao25/eurosat/split_zhou_EuroSAT.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/eurosat/shot_16-seed_1.pkl
+EuroSAT has 8100 test samples
+a photo of ZS
+acc:  54.70370650291443
+Calculated 8 description vectors
+acc:  56.30863904953003
+Calculated 14 description vectors
+acc:  55.62962889671326
+Calculated 8 description vectors
+ +++ score averaging
+acc:  57.07407593727112
+[54.70370650291443, 56.30863904953003, 55.62962889671326, 57.07407593727112]
+Reading split from /scratch/cliao25/ucf101/split_zhou_UCF101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/ucf101/shot_16-seed_1.pkl
+UCF101 has 3783 test samples
+a photo of ZS
+acc:  68.83425712585449
+Calculated 8 description vectors
+acc:  68.93998980522156
+Calculated 14 description vectors
+acc:  69.60084438323975
+Calculated 8 description vectors
+ +++ score averaging
+acc:  69.20433044433594
+[68.83425712585449, 68.93998980522156, 69.60084438323975, 69.20433044433594]
+ImageNetV2 has 10000 test samples
+a photo of ZS
+acc:  64.74999785423279
+Calculated 8 description vectors
+acc:  65.30999541282654
+Calculated 14 description vectors
+acc:  65.05999565124512
+Calculated 8 description vectors
+ +++ score averaging
+acc:  65.24999737739563
+[64.74999785423279, 65.30999541282654, 65.05999565124512, 65.24999737739563]
+ImageNetSketch has 50889 test samples
+a photo of ZS
+acc:  49.92237985134125
+Calculated 8 description vectors
+acc:  50.33897161483765
+Calculated 14 description vectors
+acc:  50.45490860939026
+Calculated 8 description vectors
+ +++ score averaging
+acc:  50.36059021949768
+[49.92237985134125, 50.33897161483765, 50.45490860939026, 50.36059021949768]
+ImageNetA has 7500 test samples
+a photo of ZS
+acc:  50.40000081062317
+Calculated 8 description vectors
+acc:  50.95999836921692
+Calculated 14 description vectors
+acc:  50.90667009353638
+Calculated 8 description vectors
+ +++ score averaging
+acc:  51.01333260536194
+[50.40000081062317, 50.95999836921692, 50.90667009353638, 51.01333260536194]
+ImageNetR has 30000 test samples
+a photo of ZS
+acc:  78.28666567802429
+Calculated 8 description vectors
+acc:  78.65999937057495
+Calculated 14 description vectors
+acc:  78.6733329296112
+Calculated 8 description vectors
+ +++ score averaging
+acc:  78.74000072479248
+[78.28666567802429, 78.65999937057495, 78.6733329296112, 78.74000072479248]
+Results:
+,ImageNet,Caltech101,OxfordPets,StanfordCars,Flowers102,Food101,FGVCAircraft,SUN397,DTD,EuroSAT,UCF101,ImageNetV2,ImageNetSketch,ImageNetA,ImageNetR,
+ZS,71.31999731063843,94.48276162147522,90.95121026039124,64.96704816818237,71.94478511810303,86.10560894012451,25.112509727478027,67.4458384513855,45.03546059131622,54.70370650291443,68.83425712585449,64.74999785423279,49.92237985134125,50.40000081062317,78.28666567802429,
+word-soup,71.67800068855286,94.44218873977661,90.46061635017395,64.74319100379944,72.47259616851807,86.14851236343384,25.082507729530334,68.0453360080719,44.917258620262146,56.30863904953003,68.93998980522156,65.30999541282654,50.33897161483765,50.95999836921692,78.65999937057495,
+descriptor-soup,71.6439962387085,94.40162181854248,91.03297591209412,65.00435471534729,72.55379557609558,86.32013201713562,25.442543625831604,67.96976923942566,45.330968499183655,55.62962889671326,69.60084438323975,65.05999565124512,50.45490860939026,50.90667009353638,78.6733329296112,
+word-soup-score-average,71.66399955749512,94.27992105484009,90.37884473800659,64.8053765296936,71.86357975006104,86.16831302642822,25.442543625831604,67.89923906326294,45.271867513656616,57.07407593727112,69.20433044433594,65.24999737739563,50.36059021949768,51.01333260536194,78.74000072479248,
+Namespace(accum_iter=1, adapter=0, adaptive_margin=0.0, bitfit=0, bs=64, cache_dir='/projectnb/textconv/cliao25/data', checkpoint='', d=512, data_dir='/scratch/cliao25', dataset='', descriptor_file='', ema=0.995, eval_only=0, gpt_centroid_eval=0, gpt_score_averaging_eval=0, init_lam=0.25, iters_per_epoch=750, label_smoothing=0.0, layer_start_t=9, layer_start_v=9, lora=0, loss='ce', lr=2e-05, lr_decay=0.0, maple=0, margin=0.0, modelname='ViT-B-16', n_descriptors=-1, n_epochs=1, openai_eval=0, optimizer='sgd', pretrained='openai', prompt_lr_multi=10.0, prompt_rand_init=0, rand_seed=0, rank=4, resblock_adapter=0, samples_per_class=1, save_model=0, score_averaging=1, seed=2, shallow_prompt_init='a photo of', shots=16, shuffle_descriptors=0, skip_ema_iters=0, soup_eval=1, ssf=0, subsample_classes='all', suffix_string='', teacher_temp=10.0, temp=60.0, text_prompt_depth=1, text_prompt_length=3, token_offset_eval=0, train_text_encoder=1, train_visual_encoder=1, train_with_descriptors=1, use_cached_image_features=0, use_pretrained_image_features=0, visual_prompt_depth=0, visual_prompt_length=3, wd=1e-05, zs_average=0)
+CHOSEN WORD SOUP DESCRIPTORS: 
+ newsletter guys considerable webpage favorite portion separately lol.
+ people trembl ee further seem isp whatever existed specifically nice.
+ amend gif faqs namely thee again taken faq ideas seem.
+ unto suggestion misc occasionally fi existed sufficiently how briefly opposite.
+ bizarre like presenting pix side blah urw.
+ bonus accordingly apt size dude asks appeal typically dicke.
+ originally notice differ specifics also began.
+ separately weird individually whatever therefore muze zope initially roughly weblog.
+CHOSEN DESC SOUP DESCRIPTORS: 
+ which is a central focus or object of worship.
+ which has usually white or off-white.
+ which is a curved or rectangular shape.
+ which has usually white or brightly colored.
+ which may have special meaning or symbolism.
+ which typically has a yellow or brownish color.
+ which has large size.
+ which typically has a large, open bed in the back.
+ which has people often in close proximity.
+ which is a short neck.
+ which has usually green or yellow.
+ which typically orange or brown.
+ which has long body.
+ which is a long, horizontal seat.
+ which can be various colors, patterns, and styles.
+ which has small to medium-sized dog.
+ which has black, blue, brindle, fawn, or harlequin coloration.
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_2.pkl
+len(dset_base_train):  16000
+number of base classes:  1000
+prompt tuning with prompt length M=3
+shape of text prompt token vectors: torch.Size([3, 512])
+shape of prefix token vectors: torch.Size([1, 512])
+Calculated 0 description vectors
+ optimizer param shapes 
+------------------------
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768, 512])
+torch.Size([768])
+torch.Size([768])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([3, 512])
+------------------------
+tokenized_text_with_descriptors.shape:  torch.Size([8, 1000, 77])
+There are 2 param groups
+epoch:0 , param_group:0, len: 10, lr:2e-05
+epoch:0 , param_group:1, len: 10, lr:0.0002
+Runing Evaluation ...
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_1.pkl
+ImageNet has 50000 test samples
+a photo of ZS
+acc:  71.16999626159668
+Calculated 8 description vectors
+acc:  71.83399796485901
+Calculated 17 description vectors
+acc:  71.59799933433533
+Calculated 8 description vectors
+ +++ score averaging
+acc:  71.82199954986572
+[71.16999626159668, 71.83399796485901, 71.59799933433533, 71.82199954986572]
+Reading split from /scratch/cliao25/caltech-101/split_zhou_Caltech101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/caltech-101/shot_16-seed_1.pkl
+Caltech101 has 2465 test samples
+a photo of ZS
+acc:  93.95537376403809
+Calculated 8 description vectors
+acc:  94.27992105484009
+Calculated 17 description vectors
+acc:  94.52332854270935
+Calculated 8 description vectors
+ +++ score averaging
+acc:  94.11764740943909
+[93.95537376403809, 94.27992105484009, 94.52332854270935, 94.11764740943909]
+Reading split from /scratch/cliao25/oxford_pets/split_zhou_OxfordPets.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_pets/shot_16-seed_1.pkl
+OxfordPets has 3669 test samples
+a photo of ZS
+acc:  90.29707908630371
+Calculated 8 description vectors
+acc:  90.54238200187683
+Calculated 17 description vectors
+acc:  90.59689044952393
+Calculated 8 description vectors
+ +++ score averaging
+acc:  90.56963324546814
+[90.29707908630371, 90.54238200187683, 90.59689044952393, 90.56963324546814]
+Reading split from /scratch/cliao25/stanford_cars/split_zhou_StanfordCars.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/stanford_cars/shot_16-seed_1.pkl
+StanfordCars has 8041 test samples
+a photo of ZS
+acc:  64.55665230751038
+Calculated 8 description vectors
+acc:  65.3525710105896
+Calculated 17 description vectors
+acc:  65.12871980667114
+Calculated 8 description vectors
+ +++ score averaging
+acc:  65.52667617797852
+[64.55665230751038, 65.3525710105896, 65.12871980667114, 65.52667617797852]
+Reading split from /scratch/cliao25/oxford_flowers/split_zhou_OxfordFlowers.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_flowers/shot_16-seed_1.pkl
+Flowers102 has 2463 test samples
+a photo of ZS
+acc:  72.43199348449707
+Calculated 8 description vectors
+acc:  72.22899198532104
+Calculated 17 description vectors
+acc:  72.55379557609558
+Calculated 8 description vectors
+ +++ score averaging
+acc:  72.14778661727905
+[72.43199348449707, 72.22899198532104, 72.55379557609558, 72.14778661727905]
+Reading split from /scratch/cliao25/food-101/split_zhou_Food101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/food-101/shot_16-seed_1.pkl
+Food101 has 30300 test samples
+a photo of ZS
+acc:  86.10891103744507
+Calculated 8 description vectors
+acc:  86.11220717430115
+Calculated 17 description vectors
+acc:  86.14851236343384
+Calculated 8 description vectors
+ +++ score averaging
+acc:  86.16501688957214
+[86.10891103744507, 86.11220717430115, 86.14851236343384, 86.16501688957214]
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/fgvc_aircraft/shot_16-seed_1.pkl
+FGVCAircraft has 3333 test samples
+a photo of ZS
+acc:  24.842482805252075
+Calculated 8 description vectors
+acc:  24.812480807304382
+Calculated 17 description vectors
+acc:  25.50255060195923
+Calculated 8 description vectors
+ +++ score averaging
+acc:  25.26252567768097
+[24.842482805252075, 24.812480807304382, 25.50255060195923, 25.26252567768097]
+Reading split from /scratch/cliao25/sun397/split_zhou_SUN397.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/sun397/shot_16-seed_1.pkl
+SUN397 has 19850 test samples
+a photo of ZS
+acc:  67.11838841438293
+Calculated 8 description vectors
+acc:  67.9546594619751
+Calculated 17 description vectors
+acc:  67.85390377044678
+Calculated 8 description vectors
+ +++ score averaging
+acc:  67.81863570213318
+[67.11838841438293, 67.9546594619751, 67.85390377044678, 67.81863570213318]
+Reading split from /scratch/cliao25/dtd/split_zhou_DescribableTextures.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/dtd/shot_16-seed_1.pkl
+DTD has 1692 test samples
+a photo of ZS
+acc:  45.92198729515076
+Calculated 8 description vectors
+acc:  45.56737542152405
+Calculated 17 description vectors
+acc:  45.981088280677795
+Calculated 8 description vectors
+ +++ score averaging
+acc:  45.44917345046997
+[45.92198729515076, 45.56737542152405, 45.981088280677795, 45.44917345046997]
+Reading split from /scratch/cliao25/eurosat/split_zhou_EuroSAT.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/eurosat/shot_16-seed_1.pkl
+EuroSAT has 8100 test samples
+a photo of ZS
+acc:  49.666666984558105
+Calculated 8 description vectors
+acc:  55.87654113769531
+Calculated 17 description vectors
+acc:  49.46913719177246
+Calculated 8 description vectors
+ +++ score averaging
+acc:  56.90123438835144
+[49.666666984558105, 55.87654113769531, 49.46913719177246, 56.90123438835144]
+Reading split from /scratch/cliao25/ucf101/split_zhou_UCF101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/ucf101/shot_16-seed_1.pkl
+UCF101 has 3783 test samples
+a photo of ZS
+acc:  68.70208382606506
+Calculated 8 description vectors
+acc:  68.596351146698
+Calculated 17 description vectors
+acc:  68.88712644577026
+Calculated 8 description vectors
+ +++ score averaging
+acc:  68.64921450614929
+[68.70208382606506, 68.596351146698, 68.88712644577026, 68.64921450614929]
+ImageNetV2 has 10000 test samples
+a photo of ZS
+acc:  64.67999815940857
+Calculated 8 description vectors
+acc:  65.23000001907349
+Calculated 17 description vectors
+acc:  64.8099958896637
+Calculated 8 description vectors
+ +++ score averaging
+acc:  65.24999737739563
+[64.67999815940857, 65.23000001907349, 64.8099958896637, 65.24999737739563]
+ImageNetSketch has 50889 test samples
+a photo of ZS
+acc:  49.88504350185394
+Calculated 8 description vectors
+acc:  50.35272836685181
+Calculated 17 description vectors
+acc:  50.39202570915222
+Calculated 8 description vectors
+ +++ score averaging
+acc:  50.33700466156006
+[49.88504350185394, 50.35272836685181, 50.39202570915222, 50.33700466156006]
+ImageNetA has 7500 test samples
+a photo of ZS
+acc:  50.17333626747131
+Calculated 8 description vectors
+acc:  50.946664810180664
+Calculated 17 description vectors
+acc:  50.80000162124634
+Calculated 8 description vectors
+ +++ score averaging
+acc:  50.999999046325684
+[50.17333626747131, 50.946664810180664, 50.80000162124634, 50.999999046325684]
+ImageNetR has 30000 test samples
+a photo of ZS
+acc:  78.2200038433075
+Calculated 8 description vectors
+acc:  78.75333428382874
+Calculated 17 description vectors
+acc:  78.50000262260437
+Calculated 8 description vectors
+ +++ score averaging
+acc:  78.82333397865295
+[78.2200038433075, 78.75333428382874, 78.50000262260437, 78.82333397865295]
+Results:
+,ImageNet,Caltech101,OxfordPets,StanfordCars,Flowers102,Food101,FGVCAircraft,SUN397,DTD,EuroSAT,UCF101,ImageNetV2,ImageNetSketch,ImageNetA,ImageNetR,
+ZS,71.16999626159668,93.95537376403809,90.29707908630371,64.55665230751038,72.43199348449707,86.10891103744507,24.842482805252075,67.11838841438293,45.92198729515076,49.666666984558105,68.70208382606506,64.67999815940857,49.88504350185394,50.17333626747131,78.2200038433075,
+word-soup,71.83399796485901,94.27992105484009,90.54238200187683,65.3525710105896,72.22899198532104,86.11220717430115,24.812480807304382,67.9546594619751,45.56737542152405,55.87654113769531,68.596351146698,65.23000001907349,50.35272836685181,50.946664810180664,78.75333428382874,
+descriptor-soup,71.59799933433533,94.52332854270935,90.59689044952393,65.12871980667114,72.55379557609558,86.14851236343384,25.50255060195923,67.85390377044678,45.981088280677795,49.46913719177246,68.88712644577026,64.8099958896637,50.39202570915222,50.80000162124634,78.50000262260437,
+word-soup-score-average,71.82199954986572,94.11764740943909,90.56963324546814,65.52667617797852,72.14778661727905,86.16501688957214,25.26252567768097,67.81863570213318,45.44917345046997,56.90123438835144,68.64921450614929,65.24999737739563,50.33700466156006,50.999999046325684,78.82333397865295,
+Namespace(accum_iter=1, adapter=0, adaptive_margin=0.0, bitfit=0, bs=64, cache_dir='/projectnb/textconv/cliao25/data', checkpoint='', d=512, data_dir='/scratch/cliao25', dataset='', descriptor_file='', ema=0.995, eval_only=0, gpt_centroid_eval=0, gpt_score_averaging_eval=0, init_lam=0.25, iters_per_epoch=750, label_smoothing=0.0, layer_start_t=9, layer_start_v=9, lora=0, loss='ce', lr=2e-05, lr_decay=0.0, maple=0, margin=0.0, modelname='ViT-B-16', n_descriptors=-1, n_epochs=1, openai_eval=0, optimizer='sgd', pretrained='openai', prompt_lr_multi=10.0, prompt_rand_init=0, rand_seed=0, rank=4, resblock_adapter=0, samples_per_class=1, save_model=0, score_averaging=1, seed=3, shallow_prompt_init='a photo of', shots=16, shuffle_descriptors=0, skip_ema_iters=0, soup_eval=1, ssf=0, subsample_classes='all', suffix_string='', teacher_temp=10.0, temp=60.0, text_prompt_depth=1, text_prompt_length=3, token_offset_eval=0, train_text_encoder=1, train_visual_encoder=1, train_with_descriptors=1, use_cached_image_features=0, use_pretrained_image_features=0, visual_prompt_depth=0, visual_prompt_length=3, wd=1e-05, zs_average=0)
+CHOSEN WORD SOUP DESCRIPTORS: 
+ enrolled inexpensive appearance involved weblog viewed though picture name information.
+ named provision von offered ours compare ment wonder random yourself.
+ info example wikipedia contact moreover named vary originally kenneth.
+ manner enlarge initially also properly herein picture.
+ appearance silly similar webpage particular weblog familiar.
+ muze differ exists weird specially referring ours here weblog persons.
+ trademarks similarly likewise jesse prerequisite nevertheless anyone foto zum.
+ ata compare last dear previously increasingly.
+CHOSEN DESC SOUP DESCRIPTORS: 
+ which can also be used for pleasure trips or as a tourist attraction.
+ which can vary in size from small to large.
+ which has people often in close proximity.
+ which may have pictures or not.
+ which can be indoors or outdoors.
+ which may have a symbolic meaning.
+ which has dark brown or black in coloration.
+ which typically used for sleeping or resting.
+ which may have decorative elements such as lights or flags.
+ which has web content.
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_3.pkl
+len(dset_base_train):  16000
+number of base classes:  1000
+prompt tuning with prompt length M=3
+shape of text prompt token vectors: torch.Size([3, 512])
+shape of prefix token vectors: torch.Size([1, 512])
+Calculated 0 description vectors
+ optimizer param shapes 
+------------------------
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([2304, 768])
+torch.Size([2304])
+torch.Size([768, 768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([768])
+torch.Size([3072, 768])
+torch.Size([3072])
+torch.Size([768, 3072])
+torch.Size([768])
+torch.Size([768, 512])
+torch.Size([768])
+torch.Size([768])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([1536, 512])
+torch.Size([1536])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([2048, 512])
+torch.Size([2048])
+torch.Size([512, 2048])
+torch.Size([512])
+torch.Size([512, 512])
+torch.Size([512])
+torch.Size([512])
+torch.Size([3, 512])
+------------------------
+tokenized_text_with_descriptors.shape:  torch.Size([8, 1000, 77])
+There are 2 param groups
+epoch:0 , param_group:0, len: 10, lr:2e-05
+epoch:0 , param_group:1, len: 10, lr:0.0002
+Runing Evaluation ...
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/imagenet/shot_16-seed_1.pkl
+ImageNet has 50000 test samples
+a photo of ZS
+acc:  71.07799649238586
+Calculated 8 description vectors
+acc:  71.67399525642395
+Calculated 10 description vectors
+acc:  71.67999744415283
+Calculated 8 description vectors
+ +++ score averaging
+acc:  71.69199585914612
+[71.07799649238586, 71.67399525642395, 71.67999744415283, 71.69199585914612]
+Reading split from /scratch/cliao25/caltech-101/split_zhou_Caltech101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/caltech-101/shot_16-seed_1.pkl
+Caltech101 has 2465 test samples
+a photo of ZS
+acc:  94.44218873977661
+Calculated 8 description vectors
+acc:  94.27992105484009
+Calculated 10 description vectors
+acc:  94.60446238517761
+Calculated 8 description vectors
+ +++ score averaging
+acc:  94.32048797607422
+[94.44218873977661, 94.27992105484009, 94.60446238517761, 94.32048797607422]
+Reading split from /scratch/cliao25/oxford_pets/split_zhou_OxfordPets.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_pets/shot_16-seed_1.pkl
+OxfordPets has 3669 test samples
+a photo of ZS
+acc:  90.62414765357971
+Calculated 8 description vectors
+acc:  90.37884473800659
+Calculated 10 description vectors
+acc:  90.43335914611816
+Calculated 8 description vectors
+ +++ score averaging
+acc:  90.3243362903595
+[90.62414765357971, 90.37884473800659, 90.43335914611816, 90.3243362903595]
+Reading split from /scratch/cliao25/stanford_cars/split_zhou_StanfordCars.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/stanford_cars/shot_16-seed_1.pkl
+StanfordCars has 8041 test samples
+a photo of ZS
+acc:  64.89242911338806
+Calculated 8 description vectors
+acc:  65.0416612625122
+Calculated 10 description vectors
+acc:  64.92973566055298
+Calculated 8 description vectors
+ +++ score averaging
+acc:  64.95460867881775
+[64.89242911338806, 65.0416612625122, 64.92973566055298, 64.95460867881775]
+Reading split from /scratch/cliao25/oxford_flowers/split_zhou_OxfordFlowers.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/oxford_flowers/shot_16-seed_1.pkl
+Flowers102 has 2463 test samples
+a photo of ZS
+acc:  72.18838930130005
+Calculated 8 description vectors
+acc:  72.31019139289856
+Calculated 10 description vectors
+acc:  72.51319885253906
+Calculated 8 description vectors
+ +++ score averaging
+acc:  72.26958870887756
+[72.18838930130005, 72.31019139289856, 72.51319885253906, 72.26958870887756]
+Reading split from /scratch/cliao25/food-101/split_zhou_Food101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/food-101/shot_16-seed_1.pkl
+Food101 has 30300 test samples
+a photo of ZS
+acc:  86.2673282623291
+Calculated 8 description vectors
+acc:  86.18481755256653
+Calculated 10 description vectors
+acc:  86.42573952674866
+Calculated 8 description vectors
+ +++ score averaging
+acc:  86.31023168563843
+[86.2673282623291, 86.18481755256653, 86.42573952674866, 86.31023168563843]
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/fgvc_aircraft/shot_16-seed_1.pkl
+FGVCAircraft has 3333 test samples
+a photo of ZS
+acc:  24.572455883026123
+Calculated 8 description vectors
+acc:  24.932491779327393
+Calculated 10 description vectors
+acc:  24.692468345165253
+Calculated 8 description vectors
+ +++ score averaging
+acc:  25.082507729530334
+[24.572455883026123, 24.932491779327393, 24.692468345165253, 25.082507729530334]
+Reading split from /scratch/cliao25/sun397/split_zhou_SUN397.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/sun397/shot_16-seed_1.pkl
+SUN397 has 19850 test samples
+a photo of ZS
+acc:  67.05793142318726
+Calculated 8 description vectors
+acc:  68.12090277671814
+Calculated 10 description vectors
+acc:  67.97984838485718
+Calculated 8 description vectors
+ +++ score averaging
+acc:  68.12593936920166
+[67.05793142318726, 68.12090277671814, 67.97984838485718, 68.12593936920166]
+Reading split from /scratch/cliao25/dtd/split_zhou_DescribableTextures.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/dtd/shot_16-seed_1.pkl
+DTD has 1692 test samples
+a photo of ZS
+acc:  45.626476407051086
+Calculated 8 description vectors
+acc:  45.685580372810364
+Calculated 10 description vectors
+acc:  45.330968499183655
+Calculated 8 description vectors
+ +++ score averaging
+acc:  45.7446813583374
+[45.626476407051086, 45.685580372810364, 45.330968499183655, 45.7446813583374]
+Reading split from /scratch/cliao25/eurosat/split_zhou_EuroSAT.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/eurosat/shot_16-seed_1.pkl
+EuroSAT has 8100 test samples
+a photo of ZS
+acc:  52.580249309539795
+Calculated 8 description vectors
+acc:  56.62962794303894
+Calculated 10 description vectors
+acc:  52.95061469078064
+Calculated 8 description vectors
+ +++ score averaging
+acc:  57.901233434677124
+[52.580249309539795, 56.62962794303894, 52.95061469078064, 57.901233434677124]
+Reading split from /scratch/cliao25/ucf101/split_zhou_UCF101.json
+Loading preprocessed few-shot data from /projectnb/textconv/cliao25/DG/refactored/word_soups/datasets/splits/ucf101/shot_16-seed_1.pkl
+UCF101 has 3783 test samples
+a photo of ZS
+acc:  68.43774318695068
+Calculated 8 description vectors
+acc:  69.07216310501099
+Calculated 10 description vectors
+acc:  68.91355514526367
+Calculated 8 description vectors
+ +++ score averaging
+acc:  69.12503242492676
+[68.43774318695068, 69.07216310501099, 68.91355514526367, 69.12503242492676]
+ImageNetV2 has 10000 test samples
+a photo of ZS
+acc:  64.56999778747559
+Calculated 8 description vectors
+acc:  65.20999670028687
+Calculated 10 description vectors
+acc:  64.95000123977661
+Calculated 8 description vectors
+ +++ score averaging
+acc:  65.23000001907349
+[64.56999778747559, 65.20999670028687, 64.95000123977661, 65.23000001907349]
+ImageNetSketch has 50889 test samples
+a photo of ZS
+acc:  49.7848242521286
+Calculated 8 description vectors
+acc:  50.00687837600708
+Calculated 10 description vectors
+acc:  50.17586946487427
+Calculated 8 description vectors
+ +++ score averaging
+acc:  50.03242492675781
+[49.7848242521286, 50.00687837600708, 50.17586946487427, 50.03242492675781]
+ImageNetA has 7500 test samples
+a photo of ZS
+acc:  49.853333830833435
+Calculated 8 description vectors
+acc:  50.78666806221008
+Calculated 10 description vectors
+acc:  50.8400022983551
+Calculated 8 description vectors
+ +++ score averaging
+acc:  50.919997692108154
+[49.853333830833435, 50.78666806221008, 50.8400022983551, 50.919997692108154]
+ImageNetR has 30000 test samples
+a photo of ZS
+acc:  78.29000353813171
+Calculated 8 description vectors
+acc:  78.65333557128906
+Calculated 10 description vectors
+acc:  78.65000367164612
+Calculated 8 description vectors
+ +++ score averaging
+acc:  78.81333231925964
+[78.29000353813171, 78.65333557128906, 78.65000367164612, 78.81333231925964]
+Results:
+,ImageNet,Caltech101,OxfordPets,StanfordCars,Flowers102,Food101,FGVCAircraft,SUN397,DTD,EuroSAT,UCF101,ImageNetV2,ImageNetSketch,ImageNetA,ImageNetR,
+ZS,71.07799649238586,94.44218873977661,90.62414765357971,64.89242911338806,72.18838930130005,86.2673282623291,24.572455883026123,67.05793142318726,45.626476407051086,52.580249309539795,68.43774318695068,64.56999778747559,49.7848242521286,49.853333830833435,78.29000353813171,
+word-soup,71.67399525642395,94.27992105484009,90.37884473800659,65.0416612625122,72.31019139289856,86.18481755256653,24.932491779327393,68.12090277671814,45.685580372810364,56.62962794303894,69.07216310501099,65.20999670028687,50.00687837600708,50.78666806221008,78.65333557128906,
+descriptor-soup,71.67999744415283,94.60446238517761,90.43335914611816,64.92973566055298,72.51319885253906,86.42573952674866,24.692468345165253,67.97984838485718,45.330968499183655,52.95061469078064,68.91355514526367,64.95000123977661,50.17586946487427,50.8400022983551,78.65000367164612,
+word-soup-score-average,71.69199585914612,94.32048797607422,90.3243362903595,64.95460867881775,72.26958870887756,86.31023168563843,25.082507729530334,68.12593936920166,45.7446813583374,57.901233434677124,69.12503242492676,65.23000001907349,50.03242492675781,50.919997692108154,78.81333231925964,
