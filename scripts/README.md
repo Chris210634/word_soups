@@ -1,6 +1,8 @@
 ## Experiment scripts for our methods and baselines
 -----------------------
 
+Results are outputted in CSV format at the end of the experiment. You can copy and paste deirectly into a spreadsheet.
+
 ### Zero-shot comparisons
 
 For all ZS methods presented in Table 3 of the paper (Open-AI handcrafted ensemble, GPT, descriptor soup, token offest, word soup), run: 
