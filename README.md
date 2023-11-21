@@ -1,7 +1,7 @@
 # Word and Descriptor Soups 🍜
 -----------------------------------------------------
 
-![](https://anonymous.4open.science/api/repo/word_soups-A766/file/figures/parameter_efficiency.png?raw=true)
+![](https://github.com/Chris210634/word_soups/blob/main/figures/parameter_efficiency.png?raw=true)
 
 Code in this repo uses code from [multimodal prompt learning](https://github.com/muzairkhattak/multimodal-prompt-learning), which in turn uses code from [Co-CoOp and CoOp](https://github.com/KaiyangZhou/CoOp).
 
