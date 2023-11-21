@@ -1,7 +1,7 @@
 ## Experiment scripts for our methods and baselines
 -----------------------
 
-Results are outputted in CSV format at the end of the experiment. You can copy and paste deirectly into a spreadsheet.
+Results are outputted in CSV format at the end of the experiment. You can copy and paste directly into a spreadsheet.
 
 ### Zero-shot comparisons
 
