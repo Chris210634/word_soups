@@ -24,7 +24,7 @@ python setup.py develop
 cd ..
 ```
 
-* Create a directory somewhere called `data/`. Download all 15 zip files from the shared Google Drive and unzip them into `data/`. The resulting file tree should look like:
+* Create a directory somewhere called `data/`. Download all 15 zip files from [this shared Google Drive](https://drive.google.com/drive/folders/1kvh5VG4ruGOcSiHKJX9dWJhPAGVgPSZs?usp=drive_link) and unzip them into `data/`. The resulting file tree should look like:
 ```
 data/
 |-- caltech-101
