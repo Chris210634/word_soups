@@ -199,21 +199,13 @@ class OxfordPets(DatasetBase):
 
         These splits are pregenerated and saved in the folder 
         ``datasets/splits/<dataset name>/*.pkl``
-
-        A small problem is that the absolute path to these images is saved,
-        so as a hack, I need to remove the prefix to the path that is specific
-        to my environment.
-
         '''
 
-        old_prefix = dataset_dir + '/'
         out = []
         for dset in dsets:
             dset_new = []
             for item in dset:
-                assert item.impath[:len(old_prefix)] == old_prefix
-                tail = item.impath[len(old_prefix):]
-                new_impath = os.path.join(root, dataset_dir, tail)
+                new_impath = os.path.join(root, dataset_dir, item.impath)
                 item_new = Datum(
                     impath=new_impath,
                     label=item.label,

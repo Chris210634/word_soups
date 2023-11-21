@@ -297,7 +297,7 @@ for epoch in range(epochs):
         ## Change this back
         fn = 'cache/image_features.y_truth.{}{}{}.tup'.format(dataset, modelname, pretrained)
     
-        if fn.split('/')[-1] in os.listdir('cache'):
+        if fn.split('/')[-1] in os.listdir('cache') and args.eval_only:
             try:
                 image_features, y_truth = torch.load(fn)
                 print('loaded image features from {}'.format(fn))
@@ -309,7 +309,8 @@ for epoch in range(epochs):
         else:
             with torch.no_grad():
                 image_features, y_truth = get_features(dl_test, model_copy, d=args.d)
-            torch.save((image_features, y_truth), fn)
+            if args.eval_only:
+                torch.save((image_features, y_truth), fn)
         
 #         if not args.use_pretrained_image_features:
 #             fn = 'cache/image_features.y_truth.{}{}.tup'.format(

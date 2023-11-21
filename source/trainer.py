@@ -123,7 +123,6 @@ def get_captioner(args, caption_prompt_text='a photo of'):
     caption_model, _, _ = open_clip.create_model_and_transforms(
       model_name="coca_ViT-L-14",
       pretrained="laion2B-s13B-b90k"
-      # cache_dir='/state/partition1/user/$(whoami)/hf'
     )
     caption_prompt_tokenized=torch.ones(
         (args.bs, 1), 

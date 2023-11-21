@@ -66,7 +66,7 @@ def dassl_dataset_conversion(dset, xform, mode, shots=None):
 
 def get_imagenet21k(
     xform,
-    shots=16, 
+    shots, 
     root,
     wordnet_tree_dic_filename='imagenet21k_miil_tree.pth',
     imagenet1k_filename='classnames.txt'
