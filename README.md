@@ -82,6 +82,8 @@ python preprocess/get_greedy_descriptor_soup.py --dataset ImageNet --seed 3
 
 This will save the greedily selected descriptors in `cache/good_descriptions_seed1__ViT-B-16_openai.list` as a list.
 
+**Example logs:** `example_logs/example_get_greedy_descriptor_soup_output.txt`
+
 Proceed to **Zero-shot comparisons** section for evaluation.
 
 ## 🍜 Word soups
@@ -107,6 +109,8 @@ python preprocess/get_greedy_word_soup.py --dataset ImageNet --seed 3 --n_descri
 
 This will save the greedily selected descriptors in `cache/word_soup_descriptors_seed1__ViT-B-16_openai.list` as a list.
 
+**Example logs:** `example_logs/example_get_greedy_word_soup_output.txt`
+
 Proceed to **Zero-shot comparisons** section for evaluation.
 
 ## 🧪 Baselines
@@ -122,11 +126,15 @@ For all ZS methods presented in Table 3 of the paper (Open-AI handcrafted ensemb
 sh scripts/run_pt_eval.sh 0 ViT-B-16 openai 512
 ```
 
+**Example logs:** `example_logs/example_run_pt_eval_ViT-B-16_openai_output.txt`
+
 For WaffleCLIP with 16 members, run:
 
 ```bash
 sh scripts/waffle_descriptors_eval.sh 16
 ```
+
+**Example logs:** `example_logs/example_waffle_descriptors_eval_output.txt`
 
 ### Few-shot OOD comparisons
 
