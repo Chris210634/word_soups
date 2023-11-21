@@ -141,83 +141,58 @@ These scripts train on 3 random splits of 16-shot ImageNet-1K. **"XD Mean"** sta
 | SSF | `scripts/run_ssf.sh 1e-4 ViT-B-16 512` | 65.86 | 58.44 |
 | VPT | `scripts/run_vpt_deep.sh 0.8 ViT-B-16 512` | 65.16 | 58.42 |
 
-## 🧪 Base to novel setting
+## 🧪 More experiments
 -----------------------------
 
-First, generate features again:
+### Base to novel setting
+
+First, generate features for each training dataset:
 
 For descriptor features:
 
 ```bash
-python generate_description_features.py --dataset ImageNet --subsample_classes base
-python generate_description_features.py --dataset Caltech101 --subsample_classes base
-python generate_description_features.py --dataset OxfordPets --subsample_classes base
-python generate_description_features.py --dataset StanfordCars --subsample_classes base
-python generate_description_features.py --dataset Flowers102 --subsample_classes base
-python generate_description_features.py --dataset Food101 --subsample_classes base
-python generate_description_features.py --dataset FGVCAircraft --subsample_classes base
-python generate_description_features.py --dataset SUN397 --subsample_classes base
-python generate_description_features.py --dataset DTD --subsample_classes base
-python generate_description_features.py --dataset EuroSAT --subsample_classes base
-python generate_description_features.py --dataset UCF101 --subsample_classes base
+for dataset in ImageNet Caltech101 OxfordPets StanfordCars Flowers102 Food101 FGVCAircraft SUN397 DTD EuroSAT UCF101;
+do
+  python preprocess/generate_description_features.py --dataset $dataset --subsample_classes base
+done
 ```
 
 For word features:
 
 ```bash
-python generate_description_features.py --dataset ImageNet --descriptions words.list --savename word_features --subsample_classes base
-python generate_description_features.py --dataset Caltech101 --descriptions words.list --savename word_features --subsample_classes base
-python generate_description_features.py --dataset OxfordPets --descriptions words.list --savename word_features --subsample_classes base
-python generate_description_features.py --dataset StanfordCars --descriptions words.list --savename word_features --subsample_classes base
-python generate_description_features.py --dataset Flowers102 --descriptions words.list --savename word_features --subsample_classes base
-python generate_description_features.py --dataset Food101 --descriptions words.list --savename word_features --subsample_classes base
-python generate_description_features.py --dataset FGVCAircraft --descriptions words.list --savename word_features --subsample_classes base
-python generate_description_features.py --dataset SUN397 --descriptions words.list --savename word_features --subsample_classes base
-python generate_description_features.py --dataset DTD --descriptions words.list --savename word_features --subsample_classes base
-python generate_description_features.py --dataset EuroSAT --descriptions words.list --savename word_features --subsample_classes base
-python generate_description_features.py --dataset UCF101 --descriptions words.list --savename word_features --subsample_classes base
+for dataset in ImageNet Caltech101 OxfordPets StanfordCars Flowers102 Food101 FGVCAircraft SUN397 DTD EuroSAT UCF101;
+do
+  python preprocess/generate_description_features.py --dataset $dataset --descriptions words.list --savename word_features --subsample_classes base
+done
 ```
 
 To get greedy descriptor soup:
 
 ```bash
-sh run_get_greedy_descriptor_soup.sh ImageNet
-sh run_get_greedy_descriptor_soup.sh Caltech101
-sh run_get_greedy_descriptor_soup.sh OxfordPets
-sh run_get_greedy_descriptor_soup.sh StanfordCars
-sh run_get_greedy_descriptor_soup.sh Flowers102
-sh run_get_greedy_descriptor_soup.sh Food101
-sh run_get_greedy_descriptor_soup.sh FGVCAircraft
-sh run_get_greedy_descriptor_soup.sh SUN397
-sh run_get_greedy_descriptor_soup.sh DTD
-sh run_get_greedy_descriptor_soup.sh EuroSAT
-sh run_get_greedy_descriptor_soup.sh UCF101
+for dataset in ImageNet Caltech101 OxfordPets StanfordCars Flowers102 Food101 FGVCAircraft SUN397 DTD EuroSAT UCF101;
+do
+  sh scripts/ablations/run_get_greedy_descriptor_soup.sh $dataset
+done
 ```
 
 To get greedy word soup:
 
 ```bash
-sh run_get_greedy_word_soup.sh ImageNet
-sh run_get_greedy_word_soup.sh Caltech101
-sh run_get_greedy_word_soup.sh OxfordPets
-sh run_get_greedy_word_soup.sh StanfordCars
-sh run_get_greedy_word_soup.sh Flowers102
-sh run_get_greedy_word_soup.sh Food101
-sh run_get_greedy_word_soup.sh FGVCAircraft
-sh run_get_greedy_word_soup.sh SUN397
-sh run_get_greedy_word_soup.sh DTD
-sh run_get_greedy_word_soup.sh EuroSAT
-sh run_get_greedy_word_soup.sh UCF101
+for dataset in ImageNet Caltech101 OxfordPets StanfordCars Flowers102 Food101 FGVCAircraft SUN397 DTD EuroSAT UCF101;
+do
+  sh scripts/ablations/run_get_greedy_word_soup.sh $dataset
+done
 ```
 
 Then run training using provided bash scripts, example:
 
-```sh run_ce_with_eval.btn.sh 5e-05 > run_ce_with_eval.btn.sh_5e-05.o ```
+```sh scripts/run_ce_with_eval.btn.sh 5e-05 > run_ce_with_eval.btn.sh_5e-05.o ```
 
-## CoOp soft descriptor ensemble baseline
-----------------------------------------------------------
+See any bash script called `scripts/*.btn.sh`.
 
-Run `coop_soft_descriptor_ensemble.sh` which logs in `train_softd.o` and outputs 
+### CoOp soft descriptor ensemble baseline
+
+Run `scripts/ablations/coop_soft_descriptor_ensemble.sh` which logs in `train_softd.o` and outputs 
 
 * `cache/soft_descriptors/random_8_10_token_8_ensemble/8_random_10_token_word_chains_seed1.list_e0.soft`
 * `cache/soft_descriptors/random_8_10_token_8_ensemble/8_random_10_token_word_chains_seed2.list_e0.soft`
@@ -226,9 +201,8 @@ Run `coop_soft_descriptor_ensemble.sh` which logs in `train_softd.o` and outputs
 These are list of 8 soft descriptors.
 
 ***To evaluate***:
-(reference `run_soft.sh`) 
+(reference `scripts/ablations/run_soft.sh`) 
 
-## More baselines
---------------------------
+### More baselines
 
-Many more baselines in the `scripts/` folder. Run these at your pleasure.
+Many more baselines in the `scripts/ablations` folder. Run these at your pleasure.
