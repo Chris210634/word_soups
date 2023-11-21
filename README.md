@@ -93,9 +93,9 @@ This needs to be done for each random seed of ImageNet training split!
 **Run:**
 
 ```bash
-python preprocess/get_greedy_word_soup.py --dataset ImageNet --seed 1 --n_descriptors 250
-python preprocess/get_greedy_word_soup.py --dataset ImageNet --seed 2 --n_descriptors 250
-python preprocess/get_greedy_word_soup.py --dataset ImageNet --seed 3 --n_descriptors 250
+python preprocess/get_greedy_word_soup.py --dataset ImageNet --seed 1 --n_descriptors 8
+python preprocess/get_greedy_word_soup.py --dataset ImageNet --seed 2 --n_descriptors 8
+python preprocess/get_greedy_word_soup.py --dataset ImageNet --seed 3 --n_descriptors 8
 ```
 
 This will save the greedily selected descriptors in `cache/word_soup_descriptors_seed1__ViT-B-16_openai.list` as a list.
@@ -112,13 +112,13 @@ Results are outputted in CSV format at the end of the experiment. You can copy a
 For all ZS methods presented in Table 3 of the paper (Open-AI handcrafted ensemble, GPT, descriptor soup, token offest, word soup), run: 
 
 ```bash
-sh run_pt_eval.sh 0 ViT-B-16 openai 512
+sh scripts/run_pt_eval.sh 0 ViT-B-16 openai 512
 ```
 
 For WaffleCLIP with 16 members, run:
 
 ```bash
-sh waffle_descriptors_eval.sh 16
+sh scripts/waffle_descriptors_eval.sh 16
 ```
 
 ### Few-shot OOD comparisons
