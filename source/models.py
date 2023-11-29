@@ -717,7 +717,8 @@ class MyClip(open_clip.model.CLIP):
         x = image
         
         # to patches - whether to use dual patchnorm - https://arxiv.org/abs/2302.01327v1
-        if self.visual.input_patchnorm:
+        # Removed from open_clip library as of October 2023
+        if hasattr(self.visual, 'input_patchnorm') and self.visual.input_patchnorm:
             # einops - rearrange(x, 'b c (h p1) (w p2) -> b (h w) (c p1 p2)')
             x = x.reshape(x.shape[0], x.shape[1], self.visual.grid_size[0], 
                           self.visual.patch_size[0], self.visual.grid_size[1], self.visual.patch_size[1])
