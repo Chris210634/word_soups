@@ -8,20 +8,18 @@ Code in this repo uses code from [multimodal prompt learning](https://github.com
 ## ⏳ Installation
 -------------------
 
-* Install dassl library.
+* Install dassl library and other requirements.
 ```bash
 # Instructions borrowed from https://github.com/KaiyangZhou/Dassl.pytorch#installation
 
-# Clone this repo
 git clone https://github.com/KaiyangZhou/Dassl.pytorch.git
 cd Dassl.pytorch/
-
-# Install dependencies
 pip install -r requirements.txt
-
-# Install this library (no need to re-build if the source code is modified)
 python setup.py develop
 cd ..
+
+pip install open_clip_torch
+pip install pytorch_metric_learning
 ```
 
 * Create a directory somewhere called `data/`. Download all 15 zip files from [this shared Google Drive](https://drive.google.com/drive/folders/1kvh5VG4ruGOcSiHKJX9dWJhPAGVgPSZs?usp=drive_link) and unzip them into `data/`. The resulting file tree should look like:
@@ -44,7 +42,7 @@ data/
 |-- ucf101
 ```
 
-Alternatively, follow the download instructions here (some dataset links are stale):
+Alternatively, follow the download instructions here (some dataset links are stale; may also need to reorganize the directory structure):
 [installing datasets](https://github.com/muzairkhattak/multimodal-prompt-learning/blob/main/docs/DATASETS.md)
 
 Modify the following two lines in `argparse_parameters.py` to reflect where you have your `data/` dir and where you want the pretrained CLIP weights to be cached (which could be many gigabytes)
