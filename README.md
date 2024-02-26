@@ -1,4 +1,4 @@
-# Word and Descriptor Soups 🍜 [[ArXiv]](https://arxiv.org/pdf/2311.13612.pdf)
+# Word and Descriptor Soups 🍜 [CVPR 2024] [[ArXiv]](https://arxiv.org/pdf/2311.13612.pdf)
 -----------------------------------------------------
 
 ![](https://github.com/Chris210634/word_soups/blob/main/figures/parameter_efficiency.png?raw=true)
